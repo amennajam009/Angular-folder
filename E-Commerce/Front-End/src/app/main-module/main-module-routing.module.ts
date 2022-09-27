@@ -19,10 +19,10 @@ children:[
   {path:'viewproducts',component:ViewproductsComponent},
   {path:'checkout',component:CheckOutComponent},
   {path:'**',component:WildCardComponent}, //slug of wildcard always **
-  {path:'AboutUs',component:AboutUsComponent},
-  {path:'contactUs',component:ContactUsComponent},
+  {path:'About-Us',component:AboutUsComponent},
+  {path:'contact-Us',component:ContactUsComponent},
   {path:'order-failed',component:OrderFailedComponent},
-  {path:'order-successful',component:OrderSuccessfulComponent},
+  {path:'order-successful',component:OrderSuccessfulComponent}
 ] }];
 
 @NgModule({
