@@ -19,8 +19,8 @@ children:[
   {path:'viewproducts',component:ViewproductsComponent},
   {path:'checkout',component:CheckOutComponent},
   {path:'**',component:WildCardComponent}, //slug of wildcard always **
-  {path:'About-Us',component:AboutUsComponent},
-  {path:'contact-Us',component:ContactUsComponent},
+  {path:'about-us',component:AboutUsComponent},
+  {path:'contact-us',component:ContactUsComponent},
   {path:'order-failed',component:OrderFailedComponent},
   {path:'order-successful',component:OrderSuccessfulComponent}
 ] }];
