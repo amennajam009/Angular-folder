@@ -1,13 +1,11 @@
  nav ul li a{
-    color: aliceblue;
+    color: #808080 ;
     font-size: 20px;
     padding-inline: 20px;
    
-  
+    
 }
-nav ul li a:hover{
-    color: #2E8BC0;
-}
+
 button{
     color: #2E8BC0;
 }
@@ -16,3 +14,19 @@ button{
     font-size: 37px;
     margin-left: 50px;
 }
+
+.basic-4 {
+    background: 
+        linear-gradient(currentColor 0 0) 
+        var(--p, 0) 100% /var(--d, 0) 3px 
+        no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+    
+   
+  }
+  .basic-4:hover {
+    --d: 100%;
+    --p: 100%;
+    
+  }
+  

@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans:600);
+/*==========SCALE-IN==========*/
+@keyframes scale-in {
+     0%   {transform: scale(10, 10); opacity: 0;}
+    100% {transform: scale(1, 1); opacity: 1;}
+}
+
+@keyframes scale-in {
+    0%   {transform: scale(10, 10); opacity: 0;}
+    100% {transform: scale(1, 1);  opacity: 1;}
+}
+/*==========ROLL-OUT==========*/
+@keyframes roll-out {
+    0%   {width: 0;}
+    100% {width: 100%; }
+}
+@keyframes roll-out {
+    0%   {width: 0;}
+    100% {width: 100%; }
+}
+body{
+   background: white;
+}
+main{
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Expletus Sans', cursive;
+}
+.hero{
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+  background:white ;
+  position: relative; 
+  color: black;
+}
+
+.hero h1{
+  font-size: 3.1em;
+  margin: auto;
+  position: absolute; 
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  
+
+}
+.hero p{
+    font-size: 1.5em;
+    margin: auto;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     z-index: 1;
+  }
+.hero img{
+  width: 100%;
+}
+.bar{
+  width: 100%;
+  height: 200px;
+  background: -moz-linear-gradient(289deg, white 0%, white 36%, white 100%);
+  background: -webkit-linear-gradient(289deg, white 0%,white 36%, white 100%);
+  background: -ms-linear-gradient(289deg,white 0%,white 36%, white 100%);
+  background: linear-gradient(161deg, white 0%, white 36%, white 100%);
+  opacity: 0.3;
+  position: absolute; 
+  z-index: 0;
+  left: 0;
+  top: 90px;
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+   -webkit-animation: roll-out 1.2s ease-out ;
+  -moz-animation: roll-out 1.2s ease-out ;
+    animation: roll-out 1.2s ease-out ; 
+}
+.hero h1, .hero p{
+  -webkit-animation: scale-in 1.3s ease-out;
+  -moz-animation: scale-in 1.3s  ease-out;
+    animation: scale-in 1.3s ease-out; 
+}
+
+
+@media all and (max-width: 768px) {
+  .hero{
+    height: 50vw;
+  }
+  .bar{
+    height: 26vw;
+    top: 10vw;
+  }
+  .hero h1{
+    font-size: 8vw;
+    top: 13vw;
+  }
+  .hero p{
+    font-size: 3vw;
+    top: 27vw;
+  }
+ 
+}
+
+h2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+  
+.img-card {
+    width:300px;
+    position: relative;
+    border-radius: 5px;
+    text-align: left;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);        
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+   max-width: 300px;
+    min-height: 250px;
+    background: white;
+    padding: 30px;
+     border-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(22, 13, 13);
+    margin:20px;
+     padding: 8px;
+}
+.card:nth-child(2){
+   background: white;
+}
+.card:last-child{
+   background: white;
+}
+.card-title{
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+.card-content{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+.card-btn{
+    all: unset;
+    display: block;
+    margin-left: auto;
+    border: 2px solid rgb(24, 14, 14);
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+}
+.card-btn:hover{
+   color:green;
+   background: rgb(22, 16, 16);
+}
+.card:nth-child(2) .card-btn:hover{
+   color:#4181ee;
+   background: #FFF;
+}
+.card:last-child .card-btn:hover{
+   color:#673ab7;
+    background: #FFF;
+}
