@@ -1,9 +1,18 @@
  nav ul li a{
     color: aliceblue;
-    display: flex;
+    font-size: 20px;
+    padding-inline: 20px;
+   
   
+}
+nav ul li a:hover{
+    color: #2E8BC0;
 }
 button{
     color: #2E8BC0;
 }
 
+.logo{
+    font-size: 37px;
+    margin-left: 50px;
+}
