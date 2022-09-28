@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ManagementModuleRoutingModule } from './management-module-routing.module';
 import { ManagementModuleComponent } from './management-module.component';
-import { AdminRegisterComponent } from './management-Components/Adminmanagement/admin-register/admin-register.component';
+
 import { AdminLoginComponent } from './management-Components/admin-management/admin-login/admin-login.component';
 import { UserLoginComponent } from './management-Components/user-management/user-login/user-login.component';
 import { UserRegisterComponent } from './management-Components/user-management/user-register/user-register.component';
@@ -12,7 +12,7 @@ import { UserRegisterComponent } from './management-Components/user-management/u
 @NgModule({
   declarations: [
     ManagementModuleComponent,
-    AdminRegisterComponent,
+   
     AdminLoginComponent,
     UserLoginComponent,
     UserRegisterComponent
