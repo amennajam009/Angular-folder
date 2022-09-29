@@ -16,7 +16,7 @@ body {
 
 
 .full-screen-container {
-  background-color: #242333;
+ background-image: url(../../../../../assets/pic/admin2.jfif);
   height: 100vh;
   width: 100vw;
   background-size: cover;
@@ -27,7 +27,7 @@ body {
 }
 
 .login-container {
-  background-color: hsla(201, 100%, 6%, 0.6);
+  background: rgba(0, 0, 0, 0.18);
   padding: 50px 30px;
   min-width: 400px;
   width: 50%;

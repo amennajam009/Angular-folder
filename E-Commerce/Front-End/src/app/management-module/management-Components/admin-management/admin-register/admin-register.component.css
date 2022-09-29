@@ -109,12 +109,9 @@ img {
 
 /*-- end reset --*/
 body {
-  background: #242333;
+  background-image: url(../../../../../assets/pic/admin2.jfif);
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #242333, #242333);
-  background: -moz-linear-gradient(to top, #242333, #242333);
-  background: -o-linear-gradient(to top, #242333, #242333);
-  background: linear-gradient(to top, #242333, #242333);
+ 
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
