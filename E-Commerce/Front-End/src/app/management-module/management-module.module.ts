@@ -7,12 +7,13 @@ import { ManagementModuleComponent } from './management-module.component';
 import { AdminLoginComponent } from './management-Components/admin-management/admin-login/admin-login.component';
 import { UserLoginComponent } from './management-Components/user-management/user-login/user-login.component';
 import { UserRegisterComponent } from './management-Components/user-management/user-register/user-register.component';
+import { AdminRegisterComponent } from './management-Components/admin-management/admin-register/admin-register.component';
 
 
 @NgModule({
   declarations: [
     ManagementModuleComponent,
-   
+    AdminRegisterComponent,
     AdminLoginComponent,
     UserLoginComponent,
     UserRegisterComponent
