@@ -75,7 +75,7 @@ body {
   padding: 10px 30px;
   width: 100%;
   border-radius: 5px;
-  background: hsla(201, 100%, 50%, 0.1);
+  background: #242333;
   border: 1px solid hsl(201, 100%, 50%);
   outline: none;
   font-size: 1.5em;
@@ -93,3 +93,6 @@ body {
   background-color: hsla(201, 100%, 50%, 0.5);
 }
 
+.loginhome{
+  margin-left: 90%;
+}
