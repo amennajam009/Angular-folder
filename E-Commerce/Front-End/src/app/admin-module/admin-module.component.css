@@ -1,4 +1,5 @@
 .sidebar {
+  background-image: url(../../assets/pic/admin-login.png);
     position: fixed;
     top: 0;
     /* rtl:raw:
@@ -19,6 +20,7 @@
   }
   
   .sidebar-sticky {
+   
     position: relative;
     top: 0;
     height: calc(100vh - 48px);
