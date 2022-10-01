@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+::selection {
+  background-color: white;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  border: black solid 6px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Major Mono Display", monospace;
+  color: white;
+}
+
+.dashboard {
+  /* Set size and position */
+  position: absolute;
+  top: 0;
+  margin: 10px;
+  width: calc(100vw - 20px);
+  height: calc(100vh - 20px);
+
+  /* Make the white dots on the background */
+  background-image: radial-gradient(#fff 2%, #000 4%);
+  background-position: 0 0;
+  background-size: 40px 40px;
+  background-repeat: repeat repeat;
+}
+
+.container {
+  position: absolute;
+  background-color: black;
+  width: 123px;
+  height: 123px;
+  border: 2px solid white;
+  margin-left: 18px;
+  margin-top: 18px;
+}
+
+.a {
+  height: 400px;
+  width: 800px;
+}
+
+#revenue {
+  padding: 50px;
+  --color: white;
+}
+
+.b {
+  top: 80px;
+  left: 880px;
+  height: 680px;
+  width: 280px;
+}
+
+#load-2 {
+  display: inline-block;
+  width: 50%;
+  margin-top: 20px;
+  height: 130px;
+  padding: 10px;
+  --color: white;
+  float: right;
+}
+
+.copyright {
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.c {
+  top: 480px;
+  width: 280px;
+  height: 280px;
+}
+
+#load-and-limit {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#load {
+  padding: 50px;
+  --color: rgba(255, 255, 255, 0.75);
+  --data-axes-color: white;
+  --data-axes-style: solid;
+  --data-axes-width: 2px;
+}
+
+#limit {
+  padding: 50px;
+  --color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.d {
+  left: 360px;
+  top: 480px;
+  width: 440px;
+  height: 240px;
+}
+
+.container .label {
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  font-size: 13px;
+}
+
+.container .logs {
+  font-size: 9px;
+  font-family: monospace;
+  padding: 5px;
+  height: 270px;
+  overflow-y: scroll;
+}
+
+.container .logs p {
+  margin: 0;
+}
+
+.title {
+  position: absolute;
+  color: white;
+  height: 40px;
+  width: 284px;
+  left: 880px;
+  margin-left: 18px;
+  margin-top: 18px;
+  background-color: black;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  text-align: right;
+  line-height: 40px;
+  font-size: 37px;
+}
+
+.highlight {
+  background-color: white;
+  color: black;
+  line-height: 40px;
+  height: 40px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+
+.highlight::selection {
+  background-color: black;
+  color: white;
+}

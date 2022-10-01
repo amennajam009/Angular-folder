@@ -1,1 +1,327 @@
-<p>dashboard works!</p>
+<!-- Copyright 2022, Paul Maier -->
+
+<!-- Charts.css - https://chartscss.org/components/colors/ -->
+<!-- Font - https://fonts.google.com/specimen/Major+Mono+Display>
+<!-- Inspiration - https://unsplash.com/photos/jekCMTpm278 -->
+
+<!-- If you like what you see, please consider liking <3 -->
+
+    <div class="dashboard">
+        <div class="container a">
+          <div class="label">
+            Annual Revenue
+          </div>
+          <table class="charts-css line show-primary-axis" id="revenue">
+            <tbody>
+              <tr>
+                <td style="--start: 0.0; --size: 0.015625"> <span class="data"> $ 10K </span> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.015625; --size: 0.03125"> <span class="data"> $ 20K </span> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.03125; --size: 0.0625"> <span class="data"> $ 40K </span> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.0625; --size: 0.125"> <span class="data"> $ 80K </span> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.125; --size: 0.25"> <span class="data"> $ 160K </span> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.25; --size: 0.5"> <span class="data"> $ 320K </span> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.5; --size: 1.0"> <span class="data"> $ 640K </span> </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="title">
+          DASH<span class="highlight">BOARD</span>
+        </div>
+        <div class="container b">
+          <div class="label">
+            Container 2
+          </div>
+          <table class="charts-css bar reverse data-spacing-2 show-heading" id="load-2">
+            <caption>GPU</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.8"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.76"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.91"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.88"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.79"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="charts-css bar data-spacing-2 show-heading" id="load-2">
+            <caption>CPU</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.5"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.54"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.89; --color: red;"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.58"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.55"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="charts-css bar reverse data-spacing-2 show-heading" id="load-2">
+            <caption>Storage</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.8"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.76"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.91"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.88"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.79"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="charts-css bar data-spacing-2 show-heading" id="load-2">
+            <caption>RAM</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.5"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.54"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.45"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.58"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.55"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="charts-css bar reverse data-spacing-2 show-heading" id="load-2">
+            <caption>Traffic</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.8"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.76"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.91"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.45"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.79"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="charts-css bar data-spacing-2 show-heading" id="load-2">
+            <caption>Swapfile</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.5"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.45"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.45"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.58"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.66"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="charts-css bar reverse data-spacing-2 show-heading" id="load-2">
+            <caption>XC 11</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.8"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.60"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.78"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.87"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.55"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="charts-css bar data-spacing-2 show-heading" id="load-2">
+            <caption>IBM 54</caption>
+            <tbody>
+              <tr>
+                <td style="--start: 0.6; --size: 0.34"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.54"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.65"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.45"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.58"> </td>
+              </tr>
+              <tr>
+                <td style="--start: 0.33; --size: 0.55"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="copyright">© 2022 Paul Maier</p>
+        </div>
+        <div class="container c">
+          <div class="label">
+            Logfiles
+          </div>
+          <div class="logs">
+            <p>[07-09-2022,12:50:21] Turning on cool music ...</p>
+            <p>[07-09-2022,12:55:44] Starting random process ...</p>
+            <p>[07-09-2022,12:56:00] Done!</p>
+            <p>[07-09-2022,12:57:21] Starting server 1 ...</p>
+            <p>[07-09-2022,12:58:02] Starting server 2 ...</p>
+            <p>[07-09-2022,12:58:56] Starting server 3 ...</p>
+            <p>[07-09-2022,12:59:13] Starting server 4 ...</p>
+            <p>[07-09-2022,13:00:12] Starting server 5 ...</p>
+            <p>[07-09-2022,13:01:45] Starting server 6 ...</p>
+            <p>[07-09-2022,13:02:01] All servers running!</p>
+            <p>[07-09-2022,13:02:55] Building firewall ...</p>
+            <p>[07-09-2022,13:05:32] Firewall operational!</p>
+            <p>[07-09-2022,13:10:11] Calculating the answer to life, the universe and everything ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Still Calculating ...</p>
+            <p>Almost done ...</p>
+            <p>[07-09-3022,13:10:11] Done! The answer is 42.</p>
+          </div>
+        </div>
+        <div class="container d">
+          <div class="label">
+            Server Load
+          </div>
+          <div id="load-and-limit">
+            <table class="charts-css area multiple" id="load">
+              <tbody>
+                <tr>
+                  <td> style="--start: 0.31; --size: 0.4" </td>
+                  <td>style="--start: 0.33; --size: 0.31" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.4; --size: 0.38" </td>
+                  <td> style="--start: 0.31; --size: 0.33" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.38; --size: 0.43" </td>
+                  <td>style="--start: 0.33; --size: 0.35" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.43; --size: 0.29" </td>
+                  <td> style="--start: 0.35; --size: 0.37" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.29; --size: 0.34" </td>
+                  <td>style="--start: 0.37; --size: 0.34" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.34; --size: 0.34" </td>
+                  <td> style="--start: 0.34; --size: 0.35" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.34; --size: 0.37" </td>
+                  <td> style="--start: 0.35; --size: 0.37" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.37; --size: 0.36" </td>
+                  <td> style="--start: 0.37; --size: 0.38" </td>
+                </tr>
+                <tr>
+                  <td>style="--start: 0.36; --size: 0.32" </td>
+                  <td> style="--start: 0.38; --size: 0.39" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.32; --size: 0.33" </td>
+                  <td> style="--start: 0.39; --size: 0.32" </td>
+                </tr>
+                <tr>
+                  <td> style="--start: 0.33; --size: 0.31" </td>
+                  <td> style="--start: 0.32; --size: 0.33" </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="charts-css line show-primary-axis" id="limit">
+              <tbody>
+                <tr>
+                  <td style="--start: 0.5; --size: 0.5"> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
