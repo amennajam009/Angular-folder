@@ -1,6 +1,6 @@
 import { FormsModule,FormBuilder,FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-
+import { Product } from 'src/app/SharedData/Interface/product';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -16,5 +16,10 @@ export class ProductsComponent implements OnInit {
   }
 
 
+  productFormModel(){
+    this.formproduct=this.FormBuilder.group({
+      
+    })
+  }
   
 }
