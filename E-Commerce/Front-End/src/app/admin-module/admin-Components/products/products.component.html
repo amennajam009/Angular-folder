@@ -1,5 +1,5 @@
 
-<form  >
+<form >
 <table  cellpadding="14">
 <tr>
   
@@ -36,8 +36,15 @@
 
 
 <tr>
- <td><input type="password"    style="width: 150%;"    id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="FABRIC/MATERIAL">
-  <label>Fabri material</label>
+<td>
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" placeholder="FABRIC/MATERIAL">
+    <label for="floatingInput">color</label>
+  </div>
+  <div class="form-floating">
+    <input type="text" class="form-control" id="floatingPassword" placeholder="FABRIC/MATERIAL">
+    <label for="floatingPassword">Logo Material</label>
+  </div>
 </td>
 
 
@@ -45,6 +52,7 @@
 
 <tr>
   <td><input type="password"    style="width: 150%;"    id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="FABRIC/MATERIAL"></td>
+
   <td>  <button class="btn btn-outline-secondary dropdown-toggle set" type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">MEN</a></li>

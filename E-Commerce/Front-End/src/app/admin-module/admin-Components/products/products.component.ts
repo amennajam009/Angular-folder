@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
 
 
-  formproduct:FormGroup;
+  formproduct:FormGroup |any;
   constructor(private FormBuilder:FormBuilder) { }
 
   ngOnInit(): void {

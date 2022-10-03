@@ -4,5 +4,8 @@ export interface Product {
     ProductPrice:number,
     ProductMaterial:string,
     EnterDescription:string,
-    Fabricmaterial:string,
+    color:string,
+    LogoMaterial:string,
+    Category:string,
+    image:[],
 }
