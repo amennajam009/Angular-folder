@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
 
   productFormModel(){
     this.formproduct=this.FormBuilder.group({
-      
+      ProductName:['',[]]
     })
   }
   
