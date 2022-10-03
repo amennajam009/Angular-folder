@@ -1,5 +1,5 @@
 
-<form >
+<form [formGroup]="MyForm" >
 <table  cellpadding="14">
 <tr>
   
@@ -29,7 +29,7 @@
 <tr>
   <div class="form-floating">
     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px;   width:270%; " ></textarea>
-    <label for="floatingTextarea2" > Leave a comment here</label>
+    <label for="floatingTextarea2" > Enter Description</label>
   </div>
 </tr>
 
@@ -43,7 +43,7 @@
 
 <tr>
   <td><input type="password"    style="width: 150%;"    id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="FABRIC/MATERIAL"></td>
-  <td>  <button class="btn btn-outline-secondary dropdown-toggle set" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <td>  <button class="btn btn-outline-secondary dropdown-toggle set" type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">MEN</a></li>
       <li><a class="dropdown-item" href="#">WOMEN</a></li>
@@ -51,6 +51,14 @@
     
   </td>
  </tr>
+
+<tr>
+  <td>
+    <div class="row px-3">
+      <input type="file" name="" id="" multiple>
+    </div>
+  </td>
+</tr>
 
  <tr>
   <button class="btn btn-outline-success ms-4"> Submit</button>

@@ -1,3 +1,4 @@
+import { FormsModule,FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private FormBuilder:FormBuilder) { }
 
   ngOnInit(): void {
   }

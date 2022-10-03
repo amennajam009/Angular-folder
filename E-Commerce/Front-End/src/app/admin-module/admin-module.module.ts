@@ -5,6 +5,7 @@ import { AdminModuleRoutingModule } from './admin-module-routing.module';
 import { AdminModuleComponent } from './admin-module.component';
 import { DashboardComponent } from './admin-Components/dashboard/dashboard.component';
 import { ProductsComponent } from './admin-Components/products/products.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { ProductsComponent } from './admin-Components/products/products.componen
   ],
   imports: [
     CommonModule,
-    AdminModuleRoutingModule
+    AdminModuleRoutingModule,
+    FormsModule,
+    
   ]
 })
 export class AdminModuleModule { }
