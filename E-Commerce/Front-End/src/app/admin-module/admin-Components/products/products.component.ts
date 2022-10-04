@@ -7,15 +7,19 @@ import { Product } from 'src/app/SharedData/Interface/product';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  
 
-
+  // yaha mai apna code declare kr rhe hun 
+  CategoryArray:any=['Men','Women'];
   formproduct:FormGroup |any;
-  constructor(private FormBuilder:FormBuilder) { }
-
+  constructor(private FormBuilder:FormBuilder) {
+    this.productFormModel()
+   }
+  
   ngOnInit(): void {
   }
 
-
+// edhr mai apna code initilazed kr rhe hun
   productFormModel(){
     this.formproduct=this.FormBuilder.group({
       ProductName:['',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]],

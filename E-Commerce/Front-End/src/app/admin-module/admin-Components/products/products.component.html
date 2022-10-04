@@ -51,12 +51,12 @@
 </tr>
 
 <tr>
-  <td><input type="password"    style="width: 150%;"    id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="FABRIC/MATERIAL"></td>
 
-  <td>  <button class="btn btn-outline-secondary dropdown-toggle set" type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
+
+  <td>  <button class="btn btn-outline-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">MEN</a></li>
-      <li><a class="dropdown-item" href="#">WOMEN</a></li>
+      <li *ngFor="let data of CategoryArray"  formArrayName="Category">{{data}}</li>
+     
     </ul>
     
   </td>
@@ -64,7 +64,7 @@
 
 <tr>
   <td>
-    <div class="row px-3">
+    <div class="row ">
       <input type="file" name="" id="" multiple>
     </div>
   </td>
