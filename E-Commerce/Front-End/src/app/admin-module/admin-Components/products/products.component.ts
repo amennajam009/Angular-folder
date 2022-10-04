@@ -24,6 +24,7 @@ export class ProductsComponent implements OnInit {
       Category:['',Validators.required],
       LogoMaterial:['',Validators.required],
       color:['',Validators.required],
+      ProductMaterial:['',[Validators.required,Validators.pattern(/[^a-z0-9]/gi)]]
 
     })
   }
