@@ -35,5 +35,9 @@ export class ProductsComponent implements OnInit {
     })
   }
   SubmitmyData(){
+    let formvalues=this.formproduct.value;
+    console.log(formvalues);
   }
+
+
 }
