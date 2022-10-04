@@ -23,12 +23,13 @@ export class ProductsComponent implements OnInit {
       ProductPrice:['',[Validators.required,Validators.pattern(/^[0-9]*$/)]],
       EnterDescription:['',Validators.required,],
       Category:['',Validators.required],
-      LogoMaterial:['',Validators.required],
+      LogoMaterial:['',Validators.required,Validators.pattern(/^[A-Za-z]+$/)],
       color:['',Validators.required],
       ProductMaterial:['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
      
 
     })
   }
-  
+  SubmitmyData(){
+  }
 }

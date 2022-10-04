@@ -1,14 +1,14 @@
 
-<form >
+<form [formGroup]="formproduct" (ngSubmit)="SubmitmyData()">
 <table  cellpadding="14">
 <tr>
   
   <td><label for="inputPassword5" class="form-label"  required>Product Name</label>
-    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"></td>
+    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" formControlName="ProductName"></td>
     
 
    <td><label for="inputPassword5" class="form-label">Product Quantity</label>
-    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" formControlName="ProductQuantity">
     </td>
   
 </tr>
@@ -17,18 +17,18 @@
 <tr>
   
   <td><label for="inputPassword5" class="form-label">Product Price</label>
-    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"></td>
+    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" formControlName="ProductPrice"></td>
     
 
    <td><label for="inputPassword5" class="form-label">Product Material</label>
-    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" formControlName="ProductMaterial" >
     </td>
   
 </tr>
 
 <tr>
   <div class="form-floating">
-    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px;   width:270%; " ></textarea>
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px;   width:270%; "  formControlName="EnterDescription"></textarea>
     <label for="floatingTextarea2" > Enter Description</label>
   </div>
 </tr>
@@ -38,11 +38,11 @@
 <tr>
 <td>
   <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="floatingInput" placeholder="FABRIC/MATERIAL">
+    <input type="text" class="form-control" id="floatingInput" placeholder="FABRIC/MATERIAL" formControlName="color" >
     <label for="floatingInput">color</label>
   </div>
   <div class="form-floating">
-    <input type="text" class="form-control" id="floatingPassword" placeholder="FABRIC/MATERIAL">
+    <input type="text" class="form-control" id="floatingPassword" placeholder="FABRIC/MATERIAL" formControlName="LogoMaterial" >
     <label for="floatingPassword">Logo Material</label>
   </div>
 </td>
