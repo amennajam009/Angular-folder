@@ -1,4 +1,4 @@
-import { FormsModule,FormBuilder,FormGroup } from '@angular/forms';
+import { FormsModule,FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/SharedData/Interface/product';
 @Component({
@@ -18,7 +18,11 @@ export class ProductsComponent implements OnInit {
 
   productFormModel(){
     this.formproduct=this.FormBuilder.group({
-      ProductName:['',[]]
+      ProductName:['',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]],
+      EnterDescription:['',Validators.required,],
+      Category:['',Validators.required],
+      LogoMaterial:['',Validators.required],
+      color:['',Validators.required]
     })
   }
   
