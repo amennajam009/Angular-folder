@@ -55,7 +55,7 @@
 
   <td>  <button class="btn btn-outline-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
     <ul class="dropdown-menu">
-      <li *ngFor="let data of CategoryArray"  formArrayName="Category">{{data}}</li>
+      <li *ngFor="let data of CategoryArray"  formControlName="Category">{{data}}</li>
      
     </ul>
     
