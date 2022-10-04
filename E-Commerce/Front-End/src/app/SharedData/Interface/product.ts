@@ -1,6 +1,6 @@
 export interface Product {
     ProductName:string,
-    ProductNumber:number,
+    ProductQuantity:number,
     ProductPrice:number,
     ProductMaterial:string,
     EnterDescription:string,

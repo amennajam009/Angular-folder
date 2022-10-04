@@ -19,10 +19,12 @@ export class ProductsComponent implements OnInit {
   productFormModel(){
     this.formproduct=this.FormBuilder.group({
       ProductName:['',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]],
+      ProductQuantity:['',[Validators.required,Validators.pattern(/^[0-9]*$/)]],
       EnterDescription:['',Validators.required,],
       Category:['',Validators.required],
       LogoMaterial:['',Validators.required],
-      color:['',Validators.required]
+      color:['',Validators.required],
+
     })
   }
   
