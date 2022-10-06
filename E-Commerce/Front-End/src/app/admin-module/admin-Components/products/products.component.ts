@@ -13,6 +13,8 @@ export class ProductsComponent implements OnInit {
   selectSize= ["Small", "Medi..", "Large", "X-L", "XX-L"];
   CategoryArray:any=['Men','Women'];
   formproduct:FormGroup |any;
+   size:any=[];
+  
   constructor(private FormBuilder:FormBuilder) {
     this.productFormModel()
    }
@@ -41,7 +43,13 @@ export class ProductsComponent implements OnInit {
   }
   
   getSize(event: any) {
-     console.log(event);
+   if(event.target.checked){
+    let value= event.target.value;
+    this.size.push(value);
+   }else{
+    this.size=this.size.filter((value:any)=>value !=event.target.value);
+   }
+console.log(this.size);
     }
   
 
