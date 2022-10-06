@@ -50,17 +50,17 @@
 
 </tr>
 
-<tr>
+<!-- <tr>
 
 
   <td>  <button class="btn btn-outline-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
     <ul class="dropdown-menu">
       <li *ngFor="let data of CategoryArray"  formControlName="Category">{{data}}</li>
-      <li *ngFor="let data of CategoryArray"  formControlName="Category">{{data}}</li>
+      
     </ul>
     
   </td>
- </tr>
+ </tr> -->
 
 <!-- <tr>
   <td>
@@ -78,7 +78,7 @@
   <label for="" class="tag">Select Size</label>
   <div class="mb-3  selectSize">
     <ng-container *ngFor="let data of selectSize" >
-    <input type="checkbox" class="form-check-input" [value]="data" [id]="data" formArrayName="selectSize">
+    <input type="checkbox" class="form-check-input" [value]="data" [id]="data" formArrayName="selectSize" (click)="getSize($event)"/>
     <label class="form-check-label mx-2" [for]="data">
       {{data}}
     </label>
