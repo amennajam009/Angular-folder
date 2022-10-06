@@ -62,13 +62,13 @@
   </td>
  </tr>
 
-<tr>
+<!-- <tr>
   <td>
     <div class="row ">
       <input type="file" name="" id="" multiple>
     </div>
   </td>
-</tr>
+</tr> -->
 
  <tr>
   <button class="btn btn-outline-success ms-4"> Submit</button>
@@ -76,11 +76,11 @@
 
  <tr>
   <label for="" class="tag">Select Size</label>
-  <div class="mb-3">
-    <ng-container *ngFor="let item of selectSize" >
-    <input type="checkbox" class="form-check-input" [value]="item" [id]="item">
-    <label class="form-check-label mx-2" [for]="item">
-      {{item}}
+  <div class="mb-3  selectSize">
+    <ng-container *ngFor="let data of selectSize" >
+    <input type="checkbox" class="form-check-input" [value]="data" [id]="data" formArrayName="selectSize">
+    <label class="form-check-label mx-2" [for]="data">
+      {{data}}
     </label>
   </ng-container>
   </div>

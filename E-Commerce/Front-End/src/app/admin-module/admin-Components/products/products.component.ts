@@ -10,7 +10,7 @@ export class ProductsComponent implements OnInit {
   
 
   // yaha mai apna code declare kr rhe hun 
-  selectSize= ["S", "M", "L", "X-L", "XX-L"]
+  selectSize= ["S", "M", "L", "X-L", "XX-L"];
   CategoryArray:any=['Men','Women'];
   formproduct:FormGroup |any;
   constructor(private FormBuilder:FormBuilder) {
@@ -40,6 +40,9 @@ export class ProductsComponent implements OnInit {
     console.log(formvalues);
   }
   
+  getSize(event: any) {
+    
+    }
   
 
 }
