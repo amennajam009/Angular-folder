@@ -8,4 +8,5 @@ export interface Product {
     LogoMaterial:string,
     Category:string,
     image:[],
+    selectSize:string,
 }

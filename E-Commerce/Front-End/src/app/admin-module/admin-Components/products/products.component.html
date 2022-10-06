@@ -56,7 +56,7 @@
   <td>  <button class="btn btn-outline-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
     <ul class="dropdown-menu">
       <li *ngFor="let data of CategoryArray"  formControlName="Category">{{data}}</li>
-     
+      <li *ngFor="let data of CategoryArray"  formControlName="Category">{{data}}</li>
     </ul>
     
   </td>
@@ -72,6 +72,18 @@
 
  <tr>
   <button class="btn btn-outline-success ms-4"> Submit</button>
+ </tr>
+
+ <tr>
+  <label for="" class="tag">Select Size</label>
+  <div class="mb-3">
+    <ng-container *ngFor="let item of selectSize" >
+    <input type="checkbox" class="form-check-input" [value]="item" [id]="item">
+    <label class="form-check-label mx-2" [for]="item">
+      {{item}}
+    </label>
+  </ng-container>
+  </div>
  </tr>
 </table>
 

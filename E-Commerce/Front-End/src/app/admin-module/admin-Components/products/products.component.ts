@@ -1,4 +1,4 @@
-import { FormsModule,FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { FormsModule,FormBuilder,FormGroup, Validators, FormArray } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/SharedData/Interface/product';
 @Component({
@@ -10,6 +10,7 @@ export class ProductsComponent implements OnInit {
   
 
   // yaha mai apna code declare kr rhe hun 
+  selectSize= ["S", "M", "L", "X-L", "XX-L"]
   CategoryArray:any=['Men','Women'];
   formproduct:FormGroup |any;
   constructor(private FormBuilder:FormBuilder) {
@@ -30,7 +31,7 @@ export class ProductsComponent implements OnInit {
       LogoMaterial:['',Validators.required,Validators.pattern(/^[A-Za-z]+$/)],
       color:['',Validators.required],
       ProductMaterial:['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
-     
+      selectSize: new FormArray([]),
 
     })
   }
@@ -38,6 +39,7 @@ export class ProductsComponent implements OnInit {
     let formvalues=this.formproduct.value;
     console.log(formvalues);
   }
-
+  
+  
 
 }
