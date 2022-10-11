@@ -49,8 +49,10 @@ export class ProductsComponent implements OnInit {
    }else{
     this.size=this.size.filter((value:any)=>value !=event.target.value);
    }
-console.log(this.size);
-    }
+
+
+   this.formproduct.get(this.selectSize).setvalue(this.size);
+  }
   
 
 }
