@@ -220,5 +220,51 @@ body{
 }
 
 
+/* main {
+
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vw;
+} */
+
+h2 {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.card-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin:  0px 10px;
+}
+
+.card {
+  width: 340px;
+  padding: 3px;
+  margin: 10px;
+  border: 1px solid #d7d7d7;
+  border-radius: 2px;
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15); */
+  background-color: white;
+}
+
+
+.card > img {
+  border-radius: 2px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.card h3 {
+  color: purple;
+}
+
+.card p {
+  color: #757575;
+  line-height: 1.5;
+  padding-top: 10px;
+}
 
 
