@@ -201,28 +201,10 @@ body{
     background: #FFF;
 }
 
- .down {
-  display: flex;
- 
-  border: 1px solid  #D2042D ;
-  background:  #D2042D ;
-  color: black;
-  font-size: 15px;
-  justify-content: center;
-  padding: 14px 15px;
-  border-radius: 30px;
-  transition: all 200ms ease;
-  box-shadow: 2px 5px 5px 0 rgba(56, 53, 53, 0.2);
-  cursor: pointer;
-  margin-left: 180px;
-  margin-top: 50px;
-  font-weight: 13px;
+.down{
+  margin: 10px;
+  
+  align-items: center;
 
- 
-}
-.down:hover {
-  color: black;
-  background: white;
-  opacity: 0.6;
-  box-shadow: 2px 2px  black;
+
 }
