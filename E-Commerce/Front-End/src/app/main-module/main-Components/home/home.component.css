@@ -273,6 +273,7 @@ h2 {
   /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
   .rating-group {
     display: inline-flex;
+    
   }
   
   /* make hover effect work properly in IE */
