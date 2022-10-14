@@ -203,17 +203,20 @@ body{
 
  .down {
   display: flex;
-  margin: 20px auto;
+  margin: px ;
   border: 1px solid #1e6262;
   background: #1e6262;
   color: white;
-  font-size: 16px;
-  line-height: 22px;
-  padding: 16px 24px;
+  font-size: 14px;
+  justify-content: center;
+  padding: 16px 21px;
   border-radius: 30px;
   transition: all 200ms ease;
   box-shadow: 2px 5px 5px 0 rgba(56, 53, 53, 0.2);
   cursor: pointer;
+  margin-left: 90px;
+  margin-top: 50px;
+  
  
 }
 .down:hover {
