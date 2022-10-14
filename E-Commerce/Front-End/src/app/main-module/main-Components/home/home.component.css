@@ -200,3 +200,25 @@ body{
    color:#673ab7;
     background: #FFF;
 }
+
+ .down {
+  display: flex;
+  margin: 20px auto;
+  border: 1px solid #1e6262;
+  background: #1e6262;
+  color: white;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  transition: all 200ms ease;
+  box-shadow: 2px 5px 5px 0 rgba(56, 53, 53, 0.2);
+  cursor: pointer;
+ 
+}
+.down:hover {
+  color: #1e6262;
+  background: white;
+  opacity: 0.6;
+  box-shadow: 2px 2px rgba(30, 98, 97, 0.6);
+}
