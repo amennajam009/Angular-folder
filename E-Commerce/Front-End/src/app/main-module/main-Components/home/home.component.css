@@ -68,10 +68,10 @@ main{
 .bar{
   width: 100%;
   height: 200px;
-  background: -moz-linear-gradient(289deg, rgb(146, 135, 135) 0%, rgb(133, 126, 126) 36%, rgb(114, 102, 102) 100%);
-  background: -webkit-linear-gradient(289deg, rgb(146, 136, 136) 0%,rgb(143, 133, 133) 36%, rgb(116, 108, 108) 100%);
-  background: -ms-linear-gradient(289deg,rgb(148, 138, 138) 0%,rgb(122, 113, 113) 36%, rgb(128, 118, 118) 100%);
-  background: linear-gradient(161deg, rgb(148, 138, 138) 0%, rgb(148, 138, 138) 36%, rgb(148, 138, 138) 100%);
+  background: -moz-linear-gradient(289deg, white 0%, white  36%, white  100%);
+  background: -webkit-linear-gradient(289deg, white  0%,white  36%, white  100%);
+  background: -ms-linear-gradient(289deg,white  0%,white  36%, white  100%);
+  background: linear-gradient(161deg,white  0%, white  36%, white  100%);
   opacity: 0.3;
   position: absolute; 
   z-index: 0;
