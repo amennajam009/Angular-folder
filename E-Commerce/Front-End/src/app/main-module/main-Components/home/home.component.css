@@ -273,7 +273,8 @@ h2 {
   /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
   .rating-group {
     display: inline-flex;
-    
+   
+
   }
   
   /* make hover effect work properly in IE */
@@ -291,7 +292,7 @@ h2 {
   .rating__label {
     cursor: pointer;
     padding: 0 0.1em;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   
   /* set default star color */
