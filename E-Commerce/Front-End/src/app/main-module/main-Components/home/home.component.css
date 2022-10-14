@@ -206,9 +206,14 @@ body{
   padding: 5px 15px;
   align-items: center;
   margin-top: 30px;
+  border: 1px solid black;
 }
 .downbtn{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.down:hover{
+ background-color:  #D2042D;
 }
