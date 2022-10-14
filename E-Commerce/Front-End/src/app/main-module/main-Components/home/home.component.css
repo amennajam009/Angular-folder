@@ -203,10 +203,10 @@ body{
 
  .down {
   display: flex;
-  margin: px ;
-  border: 1px solid #1e6262;
-  background: #1e6262;
-  color: white;
+ 
+  border: 1px solid  #D2042D ;
+  background:  #D2042D ;
+  color: black;
   font-size: 14px;
   justify-content: center;
   padding: 16px 21px;
@@ -214,13 +214,14 @@ body{
   transition: all 200ms ease;
   box-shadow: 2px 5px 5px 0 rgba(56, 53, 53, 0.2);
   cursor: pointer;
-  margin-left: 90px;
+  margin-left: 110px;
   margin-top: 50px;
+  font-weight: 13px;
   
  
 }
 .down:hover {
-  color: #1e6262;
+  color: black;
   background: white;
   opacity: 0.6;
   box-shadow: 2px 2px rgba(30, 98, 97, 0.6);
