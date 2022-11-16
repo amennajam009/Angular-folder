@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const Package = require('../package.json');
 
                 //(Load the mongo uri over there)  (Protocols han yeh )   
- mongoose.connect(`${process.env.DATA_BASE_URI}`, { useNewUrlParser: true, useUnifiedTopology: true },
+ mongoose.connect(`mongodb+srv://amen123:amen123@backend-database.uut28rz.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true },
 //  yeh call back hai 
   (error,connection) => {
     if (!error) {
