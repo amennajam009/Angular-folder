@@ -4,7 +4,8 @@ const express=require('express');
 // khae sy b response request askti hai humny icko hybrid krdia haii for mobile users for watch users nd for all users that's why we're using cors
 const cors= require('cors')
 const amen = require('./configuration/configuration')
-const PORT= 3232;
+const PORT = process.env.PORT || 9090;
+// const PORT= 3232;
 const LoadMyEnviormentVariables = require('./configuration/LoadMyEnvironmentVariable');
 
 // //Block Start Initialize the app and Creating app mete-data
@@ -32,9 +33,15 @@ app.all('*', (req, res, next) => {
      //if nothing of the response sent back so next() means other rou
 });
 
+const _AdminManagementRoute=require('./route/AdminManagmentRoute');
 
 
+// //*****UsingRoutes*****//
 
+
+app.use('/AdminManagement',_AdminManagementRoute);
+// app.use('/PaymentManagement',_PaymentManagement);
+// //*****UsingRoutes*****//
 
 // this is our error handling !!!!!!!
 app.use((req, res, next) => {
@@ -52,9 +59,13 @@ app.use((error, req, res, next) => {
     })
 });
 
+
+
+// //Start Block Accessing The Routes in the Entry Point
+
 app.listen(PORT,()=>{
     console.log(`your application has been launched ${PORT}`);
-    console.log(process.env);
+    // console.log(process.env);
 })
 
 

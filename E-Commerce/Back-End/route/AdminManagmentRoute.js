@@ -1,5 +1,5 @@
 const express=require('express');
-const Route= express.Route();
+const Router =  express.Router();
 
 
 
@@ -8,9 +8,17 @@ const Route= express.Route();
 //Start Block Calling and Initializing Middlewares
 
 //Start Block Calling and Initializing Controlers
+const {addingtwonumber,subtractnum} = require('../controllers/AdminManagemnetController');
 
 //Start Block Calling and Initializing Controlers
 
 
+
+
+// Route
+
+Router.post('/addingtwonumber',addingtwonumber);
+Router.post('/SubtractingTwoNumbers', subtractnum)
+// route
 
 module.exports = Router;
