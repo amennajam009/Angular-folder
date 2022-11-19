@@ -25,7 +25,7 @@ const addingtwonumber =  (req, res) => {
     }
 }
 //  minus one!!!
-const subtractnum=(req,res)=>{
+const SubtractingTwoNumbers=(req,res)=>{
     try {
         const { number1, number2 } = req.body;
         const result = number1-number2;
@@ -49,6 +49,6 @@ const subtractnum=(req,res)=>{
 //Start Defining and Initializing Controllers
  module.exports = {
     addingtwonumber,
-    subtractnum
+    SubtractingTwoNumbers
     
 }

@@ -8,17 +8,18 @@ const Router =  express.Router();
 //Start Block Calling and Initializing Middlewares
 
 //Start Block Calling and Initializing Controlers
-const {addingtwonumber,SubtractingTwoNumbers} = require('../controllers/AdminManagemnetController');
+const { UserTable} = require('../controllers/UserManagementController');
 
 
 //Start Block Calling and Initializing Controlers
 
 
 
+
 // Route
 
-Router.post('/addingtwonumber',addingtwonumber);
-Router.post('/SubtractingTwoNumbers',SubtractingTwoNumbers);
+Router.post('/UserTable', UserTable);
+
 // route
 
 module.exports = Router;

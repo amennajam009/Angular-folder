@@ -34,12 +34,15 @@ app.all('*', (req, res, next) => {
 });
 
 const _AdminManagementRoute=require('./route/AdminManagmentRoute');
+const _UserManagementRoute=require('./route/UserManagementRoute');
+
 
 
 // //*****UsingRoutes*****//
 
 
 app.use('/AdminManagement',_AdminManagementRoute);
+app.use('/UserManagement', _UserManagementRoute);
 // app.use('/PaymentManagement',_PaymentManagement);
 // //*****UsingRoutes*****//
 
