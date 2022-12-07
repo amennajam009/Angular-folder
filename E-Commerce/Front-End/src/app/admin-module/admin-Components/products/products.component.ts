@@ -14,6 +14,9 @@ export class ProductsComponent implements OnInit {
   CategoryArray:any=['Men','Women'];
   formproduct:FormGroup |any;
    size:any=[];
+   newImageArray:any=[]
+button:boolean=true
+
   
   constructor(private FormBuilder:FormBuilder) {
     this.productFormModel()
@@ -39,7 +42,19 @@ export class ProductsComponent implements OnInit {
   }
   SubmitmyData(){
     let formvalues=this.formproduct.value;
-    console.log(formvalues);
+  //  let category= 'hi category';
+  //  !!(formvalues.category) ? category : '' ;
+  //  formvalues;
+
+
+  // let suppose humry pas ek array of object hai
+     let ABC =[
+      {name:'amen'},
+      {name:'harry'},
+      {name:'neena'}
+     ]
+   
+     let [,secondvalue]=ABC;
   }
   
   getSize(event: any) {
@@ -56,7 +71,21 @@ export class ProductsComponent implements OnInit {
   
 
 
+    }
+  
+    // getImages(event:any){
+    //   let fielsLength=event.target.files.length;
+    //   if(event.target.files.length<=5){
+    //     [...event.target.files].forEach(element => this.newImageArray.push(element) );
+    //   }
+    //   else{
+    //     this.newImageArray=[]
+    //     this.toaster.error(`limit is five you have selected ${fielsLength}`)
+    //     this.fileSelect.nativeElement.value=null
+        
+        
+    //   }
+    // }
 
 
 
-}
