@@ -8,6 +8,7 @@ import { ProductsComponent } from './admin-Components/products/products.componen
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     AdminModuleComponent,
@@ -19,6 +20,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     AdminModuleRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+   
+    
+    
     
   ]
 })

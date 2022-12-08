@@ -1,6 +1,8 @@
-import { FormsModule,FormBuilder,FormGroup, Validators, FormArray } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/SharedData/Interface/product';
+
+import { FormsModule,FormBuilder,FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -16,45 +18,42 @@ export class ProductsComponent implements OnInit {
    size:any=[];
    newImageArray:any=[]
 button:boolean=true
-
+@ViewChild('fileSelect') fileSelect:ElementRef|any
   
-  constructor(private FormBuilder:FormBuilder) {
+
+
+
+ProductCreateForm:FormGroup|any
+  constructor(private FormBuilder:FormBuilder,private toaster:ToastrService,) {
     this.productFormModel()
    }
   
   ngOnInit(): void {
   }
 
+ 
+
 // edhr mai apna code initilazed kr rhe hun
   productFormModel(){
     this.formproduct=this.FormBuilder.group({
-      ProductName:['',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]],
-      ProductQuantity:['',[Validators.required,Validators.pattern(/^[0-9]*$/)]],
-      ProductPrice:['',[Validators.required,Validators.pattern(/^[0-9]*$/)]],
-      EnterDescription:['',Validators.required,],
-      Category:['',Validators.required],
-      LogoMaterial:['',Validators.required,Validators.pattern(/^[A-Za-z]+$/)],
-      color:['',Validators.required],
-      ProductMaterial:['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
+      ProductName:new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
+      ProductQuantity:new FormControl('',[Validators.required,Validators.pattern(/^[0-9]*$/)]),
+      ProductPrice:new FormControl('',[Validators.required,Validators.pattern(/^[0-9]*$/)]),
+      EnterDescription:new FormControl('',Validators.required,),
+      Category:new FormControl('',Validators.required),
+      LogoMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
+      color:new FormControl('',Validators.required),
+      ProductMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
       selectSize: new FormArray([]),
 
     })
   }
   SubmitmyData(){
-    let formvalues=this.formproduct.value;
-  //  let category= 'hi category';
-  //  !!(formvalues.category) ? category : '' ;
-  //  formvalues;
-
-
-  // let suppose humry pas ek array of object hai
-     let ABC =[
-      {name:'amen'},
-      {name:'harry'},
-      {name:'neena'}
-     ]
-   
-     let [,secondvalue]=ABC;
+  
+    this.size.forEach((element:string) => {
+      let formControl=new FormControl(element);
+      this.ProductCreateForm.get("selectSize").push(formControl)
+    });
   }
   
   getSize(event: any) {
@@ -71,21 +70,24 @@ button:boolean=true
   
 
 
+  getImages(event:any){
+    let fileLength=event.target.files.length;
+    if(event.target.files.length<=5){
+      [...event.target.files].forEach(element => this.newImageArray.push(element) );
     }
-  
-    // getImages(event:any){
-    //   let fielsLength=event.target.files.length;
-    //   if(event.target.files.length<=5){
-    //     [...event.target.files].forEach(element => this.newImageArray.push(element) );
-    //   }
-    //   else{
-    //     this.newImageArray=[]
-    //     this.toaster.error(`limit is five you have selected ${fielsLength}`)
-    //     this.fileSelect.nativeElement.value=null
-        
-        
-    //   }
-    // }
+    else{
+      this.newImageArray=[]
+      this.toaster.error(`limit is five you have selected ${fileLength}`)
+      this.fileSelect.nativeElement.value=null
+      
+      
+    }
+  }
 
+
+
+
+}
+    
 
 
