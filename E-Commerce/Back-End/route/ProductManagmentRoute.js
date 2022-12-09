@@ -1,8 +1,9 @@
 const express = require('express');
 const Router =  express.Router();
-//Start Block Dependencies
+const {CreateProduct}=require('../controllers/productManagemnetcontroller');
 
-//Start Block Calling and Initializing Middlewares
+// calling my middleware and utilss
+const {checkingAuthentication} =require('../middlewares/Firstguard')
 
 //Start Block Calling and Initializing Middlewares
 
@@ -10,8 +11,6 @@ const Router =  express.Router();
 
 //Start Block Calling and Initializing Controlers
 
-//Routes
-
-//Routes
+Router.get('/createProduct',checkingAuthentication,CreateProduct);
 
 module.exports = Router;
