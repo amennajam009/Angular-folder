@@ -3,8 +3,8 @@
 
         // edhr hum ny phly destruct krlia hai body may sy token
         const{token}=req.body
-        if(token!==1){
-            return
+        if(token !==1){
+            return "You are Not Authorized"
         }else{
             next();
         }
@@ -13,4 +13,6 @@
     }
 }
 
-module.exports={checkingAuthentication}
+module.exports={
+    checkingAuthentication
+}

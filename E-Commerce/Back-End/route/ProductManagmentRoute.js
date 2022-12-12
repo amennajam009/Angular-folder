@@ -11,6 +11,6 @@ const {checkingAuthentication} =require('../middlewares/Firstguard')
 
 //Start Block Calling and Initializing Controlers
 
-Router.get('/createProduct',checkingAuthentication,CreateProduct);
+Router.get(checkingAuthentication);
 
 module.exports = Router;

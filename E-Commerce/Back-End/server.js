@@ -32,7 +32,7 @@ app.all('*', (req, res, next) => {
     next();
      //if nothing of the response sent back so next() means other rou
 });
-
+const _productManagmentRoute=require('./route/ProductManagmentRoute');
 const _AdminManagementRoute=require('./route/AdminManagmentRoute');
 const _UserManagementRoute=require('./route/UserManagementRoute');
 
@@ -40,7 +40,7 @@ const _UserManagementRoute=require('./route/UserManagementRoute');
 
 // //*****UsingRoutes*****//
 
-
+app.use('/productManagment',_productManagmentRoute);
 app.use('/AdminManagement',_AdminManagementRoute);
 app.use('/UserManagement', _UserManagementRoute);
 // app.use('/PaymentManagement',_PaymentManagement);

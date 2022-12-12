@@ -1,3 +1,4 @@
+import { TestingComponent } from './admin-Components/testing/testing.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,11 +10,13 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     AdminModuleComponent,
     DashboardComponent,
-    ProductsComponent
+    ProductsComponent,
+    TestingComponent
   ],
   imports: [
     CommonModule,
