@@ -1,24 +1,18 @@
 
 
-<form [formGroup]="myForm" (ngSubmit)="SubmitMyForm">
+<form [formGroup]="myForm" (ngSubmit)="Submitmyform()">
     <tr>
   
         <td><label for="inputPassword5" class="form-label"  required>Email</label>
-          <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" formControlName="Email"></td>
+          <input type="email" id="inputPassword5" class="form-control"  formControlName="email"></td>
         </tr>
       <tr>
         <td><label for="inputPassword5" class="form-label">Password</label>
-            <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" formControlName="password">
+            <input type="text" id="inputPassword5" class="form-control"  formControlName="password">
             </td>
       </tr>
-         
-         
-
       
-    
-            <button class="btn btn-outline-success ms-4 mt-5"> Submit</button>
-     
-          
-
-
+         <tr>
+          <td><button type="submit" class="mt-5"  >submit</button></td>
+         </tr>
 </form>
