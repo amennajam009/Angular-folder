@@ -35,7 +35,7 @@ app.all('*', (req, res, next) => {
 const _productManagmentRoute=require('./route/ProductManagmentRoute');
 const _AdminManagementRoute=require('./route/AdminManagmentRoute');
 const _UserManagementRoute=require('./route/UserManagementRoute');
-
+const _TestingManagementRoute=require('./route/TestingRoute')
 
 
 // //*****UsingRoutes*****//
@@ -43,6 +43,7 @@ const _UserManagementRoute=require('./route/UserManagementRoute');
 app.use('/productManagment',_productManagmentRoute);
 app.use('/AdminManagement',_AdminManagementRoute);
 app.use('/UserManagement', _UserManagementRoute);
+app.use('/TestingManagement' , _TestingManagementRoute);
 // app.use('/PaymentManagement',_PaymentManagement);
 // //*****UsingRoutes*****//
 

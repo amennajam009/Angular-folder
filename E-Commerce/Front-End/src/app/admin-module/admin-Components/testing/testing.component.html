@@ -1,5 +1,4 @@
 
-
 <form [formGroup]="myForm" (ngSubmit)="Submitmyform()">
     <tr>
   
@@ -14,5 +13,10 @@
       
          <tr>
           <td><button type="submit" class="mt-5"  >submit</button></td>
-         </tr>
+         </tr>       
 </form>
+
+<br><br><br><br>
+
+<button  (click)="getPostData()">GetData</button>
+ {{showData}}
