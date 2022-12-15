@@ -18,7 +18,7 @@ const postTestingData= ( req,res)=>{
 
 const getTestingData=(req,res)=>{
     try {
-        let data='Hello world';
+        let data='You reached here';
         res.json({
             message:'You have reached the End Point of Get',
             Data:true,
