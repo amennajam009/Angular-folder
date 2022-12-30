@@ -1,5 +1,5 @@
 
-import { FormsModule,FormBuilder,FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
+import { FormsModule,FormBuilder,FormGroup, Validators, FormArray, FormControl ,  } from '@angular/forms';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -54,7 +54,26 @@ ProductCreateForm:FormGroup|any
       let formControl=new FormControl(element);
       this.ProductCreateForm.get("selectSize").push(formControl)
     });
+
+
+    let  MultipartFormData=new FormData();
+    MultipartFormData.append('productName',this.ProductCreateForm.get('productName').value)
+    MultipartFormData.append('ProductQuantity', this.ProductCreateForm.get('ProductQuantity').value);
+    MultipartFormData.append('ProductPrice', this.ProductCreateForm.get('ProductPrice').value);
+    MultipartFormData.append('EnterDescription', this.ProductCreateForm.get('EnterDescription').value);
+    MultipartFormData.append('Category', this.ProductCreateForm.get('Category').value);
+    MultipartFormData.append('LogoMaterial', this.ProductCreateForm.get('LogoMaterial').value);
+    MultipartFormData.append('color', this.ProductCreateForm.get('color').value);
+    MultipartFormData.append('ProductMaterial', this.ProductCreateForm.get(' ProductMaterial').value);
+    MultipartFormData.append('selectSize', this.ProductCreateForm.get('selectSize').value);
+    
+    this.newImageArray.forEach((imagedata:any)=>{
+  MultipartFormData.append('images',imagedata);
+    
+    })
   }
+
+    
   
   getSize(event: any) {
    if(event.target.checked){
@@ -84,7 +103,7 @@ ProductCreateForm:FormGroup|any
     }
   }
 
-
+ 
 
 
 }

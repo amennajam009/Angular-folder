@@ -1,5 +1,17 @@
 
-<form [formGroup]="formproduct" (ngSubmit)="SubmitmyData()">
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body >
+  <h2 class="mt-4">Welcome To Admin Panel</h2>
+
+
+<form [formGroup]="formproduct" (ngSubmit)="SubmitmyData()" >
 <table  cellpadding="14">
 <tr>
   
@@ -53,13 +65,13 @@
 
 
  <tr>
-  <button class="btn btn-outline-success ms-4"> Submit</button>
+  <button class="btn btn-outline-success ms-5"> Submit</button>
  </tr>
 
  <tr>
 
   
-  <label for="" class="tag">Select Size</label>
+  <label for="" class="tag mt-5">Select Size</label>
   <div class="  selectSize">
     <ng-container *ngFor="let data of selectSize" >
     <input type="checkbox" class="form-check-input"   [value]="data" [id]="data" formArrayName="selectSize" (click)="getSize($event)"/>  
@@ -72,7 +84,7 @@
 
 
 
- <label for="myfile">Select a file:</label>
+ <label for="myfile" class="mt-5">Select a file:</label>
  <input type="file" id="myfile" name="myfile" multiple (change)="getImages($event)" #fileSelect>
 
 
@@ -85,8 +97,12 @@
 </div>
 </div> -->
  </table>
-
-
-
-
 </form>
+</body>
+</html>
+
+
+
+
+
+
