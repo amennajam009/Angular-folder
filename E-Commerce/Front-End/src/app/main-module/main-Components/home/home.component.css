@@ -363,7 +363,7 @@ h2 {
     padding-top: 10%;
     margin-bottom: 60px;
     font-weight: 600;
-    position: relative;
+    /* position: relative; */
   }
   
   .container h1::after {
