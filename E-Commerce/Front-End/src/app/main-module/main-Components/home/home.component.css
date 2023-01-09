@@ -166,8 +166,12 @@ body{
   min-height: 100vw;
 } */
 
-h2 {
+h1 {
   padding: 20px 0px;
+  text-align: center;
+}
+.sec{
+  padding: 15px 0px;
   text-align: center;
 }
 
@@ -692,12 +696,16 @@ margin-top: 60px;
 --------------------------------------------------------------*/
 .about .about-img {
   min-height: 500px;
-  /* margin-left: 30px; */
+  
   background-repeat: no-repeat;
   
+  
+}
+.about{
+  margin-top: 60px;
 }
 .learn{
-  /* margin-left: 46%; */
+   margin-left: 46%;                  
 }
 
 .about h2 {
