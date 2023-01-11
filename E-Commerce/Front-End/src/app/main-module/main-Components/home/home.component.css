@@ -1005,3 +1005,6 @@ h5{
   font-weight: 700;
   color: var(--color-primary);
 }
+.tab-content{
+  margin-top: 50px;
+}
