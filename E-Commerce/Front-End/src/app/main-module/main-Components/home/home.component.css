@@ -50,7 +50,7 @@ button:hover:after {
 
 
 h2{
-    margin-top: 40px;
+    /* margin-top: 40px; */
     display: flex;
     justify-content: center;
 }
@@ -60,6 +60,7 @@ h3{
     justify-content: center;
     color: white;
     /* padding-bottom: 20px; */
+   
   
 }
 
@@ -441,12 +442,14 @@ h1 {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #000;
+    /* background-color: #000; */
     overflow: hidden;
     -moz-transition: transform .4s;
     -o-transition: transform .4s;
     -webkit-transition: transform .4s;
     transition: transform .4s;
+  
+ 
 }
 
 .slider > div {
@@ -458,7 +461,7 @@ h1 {
     position: absolute;
     font-size: 60px;
     margin: 20px;
-    top: 40%;
+    /* top: 40%; */
     text-shadow: 0 10px 2px #223422;
     transition: .3s;
     width: 30px;
@@ -635,7 +638,7 @@ h1 {
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 60px;
+/* margin-top: 60px; */
 }
 
 
@@ -647,7 +650,7 @@ margin-top: 60px;
 
 .faq .faq-list li {
   border-bottom: 1px solid #eee;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding-bottom: 20px;
 }
 
@@ -1040,3 +1043,26 @@ h5{
   padding-bottom: 50px;
   color: white;
 }
+ .fur2{
+   padding-bottom: 40px;
+ }
+
+ .sli{
+  padding-top: 150px;
+  padding-bottom: 150px;
+ }
+ .question ul li a{
+  text-decoration: none;
+  color: white;
+  padding-top: 40px;
+ }
+ .question{
+  padding-bottom: 50px;
+ }
+
+
+
+
+
+
+
