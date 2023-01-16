@@ -1,9 +1,9 @@
 const express = require('express');
 const Router =  express.Router();
-const {CreateProduct}=require('../controllers/productManagemnetcontroller');
+const {ProductData}=require('../controllers/productManagemnetcontroller');
 
 // calling my middleware and utilss
-const {checkingAuthentication} =require('../middlewares/Firstguard')
+const {UploadProductImage} =require('../middlewares/Firstguard')
 
 //Start Block Calling and Initializing Middlewares
 
@@ -11,6 +11,6 @@ const {checkingAuthentication} =require('../middlewares/Firstguard')
 
 //Start Block Calling and Initializing Controlers
 
-Router.get(checkingAuthentication);
+Router.post('/ProductData',UploadProductImage.array('images',20),ProductData);
 
 module.exports = Router;
