@@ -1,6 +1,10 @@
 //Dependencies
+
+// multer humri image ko read krny k liye use hota hai
 const multer = require('multer');
+// crypto usko encrypted krta hai like in a string form 
 const crypto = require('crypto');
+//  fs humra folder banata hai 
 const fs = require('fs'); //Create File or Folder or Read File Delete File Local machine
 // Dependince
 
@@ -11,7 +15,7 @@ const hashFunc = (fileName) => {
     const hash = crypto.createHash('md5');
     hash.update(fileName); 
     const md5sum = hash.digest('hex');
-    return md5sum;
+    return md5sum; 
 };
 //Block Ends For Hashing the ImageUrl
 
