@@ -12,5 +12,6 @@ const {UploadProductImage} =require('../middlewares/Firstguard')
 //Start Block Calling and Initializing Controlers
 
 Router.post('/ProductData',UploadProductImage.array('images',20),ProductData);
+Router.get('/ProductData', ProductData);
 
 module.exports = Router;
