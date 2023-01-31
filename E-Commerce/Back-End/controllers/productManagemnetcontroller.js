@@ -1,24 +1,24 @@
-const ProductModelSchema =require('../models/productModel')
+const ProductModelSchema =require('../models/productmodel')
 const fs=require('fs')
 // const productModel = require('../models/productModel')
 
 
 const ProductData=async (req,res )=>{
 try {
-    const{productName,price,categories,flavour,description,size,Quantity}=req.body
+    const{ProductName,ProductPrice,Category,LogoMaterial,description,size,ProductQuantity,color}=req.body
     let ImageDetails=[]
     let Size=size.split(',')
     req.files.forEach(element => {
         const {filename,orignalname,mimetype}=element
         ImageDetails.push({
-            ImageUrl:`assets/Product/${productName}/${filename}`,
+            ImageUrl:`assets/Product/${ProductName}/${filename}`,
             ImageName:orignalname,
             ImageMimeType:mimetype
         })
     });
     // creating collection in database 
     const documentoCraete=  new ProductModelSchema({
-        productName,price,description,categories,size:Size,Quantity,flavour,
+        ProductName,ProductPrice,description,Category,size:Size,ProductQuantity,LogoMaterial,color,
         ImageDetail:ImageDetails
     })
     // if data is saved this will be the response 
