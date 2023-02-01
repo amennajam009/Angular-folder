@@ -1,3 +1,4 @@
+import { ProductdataService } from './../../../Shared/Services/productdata.service';
 
 import { FormsModule,FormBuilder,FormGroup, Validators, FormArray, FormControl ,  } from '@angular/forms';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
@@ -24,7 +25,7 @@ button:boolean=true
 
 
 ProductCreateForm:FormGroup|any
-  constructor(private FormBuilder:FormBuilder,private toaster:ToastrService,) {
+  constructor(private FormBuilder:FormBuilder,private toaster:ToastrService, private ProductdataService:ProductdataService) {
     this.productFormModel()
    }
   
@@ -52,25 +53,46 @@ ProductCreateForm:FormGroup|any
   
     this.size.forEach((element:string) => {
       let formControl=new FormControl(element);
-      this.ProductCreateForm.get("selectSize").push(formControl)
+      this.formproduct.get("selectSize").push(formControl)
     });
 
 
     let  MultipartFormData=new FormData();
-    MultipartFormData.append('productName',this.ProductCreateForm.get('productName').value)
-    MultipartFormData.append('ProductQuantity', this.ProductCreateForm.get('ProductQuantity').value);
-    MultipartFormData.append('ProductPrice', this.ProductCreateForm.get('ProductPrice').value);
-    MultipartFormData.append('EnterDescription', this.ProductCreateForm.get('EnterDescription').value);
-    MultipartFormData.append('Category', this.ProductCreateForm.get('Category').value);
-    MultipartFormData.append('LogoMaterial', this.ProductCreateForm.get('LogoMaterial').value);
-    MultipartFormData.append('color', this.ProductCreateForm.get('color').value);
-    MultipartFormData.append('ProductMaterial', this.ProductCreateForm.get(' ProductMaterial').value);
-    MultipartFormData.append('selectSize', this.ProductCreateForm.get('selectSize').value);
+    MultipartFormData.append('productName',this.formproduct.get('productName').value);
+    MultipartFormData.append('ProductQuantity', this.formproduct.get('ProductQuantity').value);
+    MultipartFormData.append('ProductPrice', this.formproduct.get('ProductPrice').value);
+    MultipartFormData.append('EnterDescription', this.formproduct.get('EnterDescription').value);
+    MultipartFormData.append('Category', this.formproduct.get('Category').value);
+    MultipartFormData.append('LogoMaterial', this.formproduct.get('LogoMaterial').value);
+    MultipartFormData.append('color', this.formproduct.get('color').value);
+    MultipartFormData.append('ProductMaterial', this.formproduct.get(' ProductMaterial').value);
+    MultipartFormData.append('selectSize', this.formproduct.get('selectSize').value);
     
     this.newImageArray.forEach((imagedata:any)=>{
   MultipartFormData.append('images',imagedata);
     
     })
+
+
+
+
+
+
+    // let formvalue=this.ProductCreateForm.value
+
+    // this.ProductdataService.CreateProductcard(MultipartFormData).subscribe((res:any)=>{
+    //   this.toaster.success(res.message)
+    //   let productSize=this.ProductCreateForm.get('size')
+    //   productSize.clear()
+    //   this.ProductCreateForm.reset()
+    //   this.size=[ ]
+      
+      
+    //   this.fileSelect.nativeElement.value=null
+    //   this.newImageArray=[]
+    
+    
+    // })
   }
 
     
@@ -84,7 +106,7 @@ ProductCreateForm:FormGroup|any
    }
 
 
-   this.formproduct.get(this.selectSize).setvalue(this.size);
+  //  this.formproduct.get(this.selectSize).setvalue(this.size);
   }
   
 
