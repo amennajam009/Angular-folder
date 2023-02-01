@@ -24,7 +24,7 @@ button:boolean=true
 
 
 
-ProductCreateForm:FormGroup|any
+// ProductCreateForm:FormGroup|any
   constructor(private FormBuilder:FormBuilder,private toaster:ToastrService, private ProductdataService:ProductdataService) {
     this.productFormModel()
    }
@@ -49,8 +49,50 @@ ProductCreateForm:FormGroup|any
 
     })
   }
+
+
+
+
+  getSize(event: any) {
+    if(event.target.checked){
+     let value= event.target.value;
+     this.size.push(value);
+    }else{
+     this.size=this.size.filter((value:any)=>value !=event.target.value);
+    }
+ 
+ 
+   //  this.formproduct.get(this.selectSize).setvalue(this.size);
+   }
+   
+ 
+ 
+   getImages(event:any){
+     let fileLength=event.target.files.length;
+     if(event.target.files.length<=5){
+       [...event.target.files].forEach(element => this.newImageArray.push(element) );
+     }
+     else{
+       this.newImageArray=[]
+       this.toaster.error(`limit is five you have selected ${fileLength}`)
+       this.fileSelect.nativeElement.value=null
+       
+       
+     }
+   }
+
+
+
+
+
+
+
+
+
+
+
   SubmitmyData(){
-  
+    let formvalue=this.formproduct.value
     this.size.forEach((element:string) => {
       let formControl=new FormControl(element);
       this.formproduct.get("selectSize").push(formControl)
@@ -78,7 +120,7 @@ ProductCreateForm:FormGroup|any
 
 
 
-    // let formvalue=this.ProductCreateForm.value
+   
 
     // this.ProductdataService.CreateProductcard(MultipartFormData).subscribe((res:any)=>{
     //   this.toaster.success(res.message)
@@ -97,33 +139,33 @@ ProductCreateForm:FormGroup|any
 
     
   
-  getSize(event: any) {
-   if(event.target.checked){
-    let value= event.target.value;
-    this.size.push(value);
-   }else{
-    this.size=this.size.filter((value:any)=>value !=event.target.value);
-   }
+  // getSize(event: any) {
+  //  if(event.target.checked){
+  //   let value= event.target.value;
+  //   this.size.push(value);
+  //  }else{
+  //   this.size=this.size.filter((value:any)=>value !=event.target.value);
+  //  }
 
 
   //  this.formproduct.get(this.selectSize).setvalue(this.size);
-  }
+  
   
 
 
-  getImages(event:any){
-    let fileLength=event.target.files.length;
-    if(event.target.files.length<=5){
-      [...event.target.files].forEach(element => this.newImageArray.push(element) );
-    }
-    else{
-      this.newImageArray=[]
-      this.toaster.error(`limit is five you have selected ${fileLength}`)
-      this.fileSelect.nativeElement.value=null
+  // getImages(event:any){
+  //   let fileLength=event.target.files.length;
+  //   if(event.target.files.length<=5){
+  //     [...event.target.files].forEach(element => this.newImageArray.push(element) );
+  //   }
+  //   else{
+  //     this.newImageArray=[]
+  //     this.toaster.error(`limit is five you have selected ${fileLength}`)
+  //     this.fileSelect.nativeElement.value=null
       
       
-    }
-  }
+  //   }
+  // }
 
  
 
