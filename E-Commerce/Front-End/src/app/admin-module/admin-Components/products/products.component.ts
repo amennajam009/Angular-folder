@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
   selectSize= ["Small", "Medi..", "Large", "X-L", "XX-L"];
   CategoryArray:any=['Men','Women'];
   formproduct:FormGroup |any;
-   newsizesarray:any=[];
+   size:any=[];
    newImageArray:any=[]
 button:boolean=true
 @ViewChild('fileSelect') fileSelect:ElementRef|any
@@ -45,7 +45,7 @@ button:boolean=true
       LogoMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
       color:new FormControl('',Validators.required),
       ProductMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
-      Size: new FormArray([]),
+      selectSize: new FormArray([]),
 
     })
   }
@@ -56,9 +56,9 @@ button:boolean=true
   getSize(event: any) {
     if(event.target.checked){
      let value= event.target.value;
-     this.newsizesarray.push(value);
+     this.size.push(value);
     }else{
-     this.newImageArray=this.newsizesarray.filter((value:any)=>value !=event.target.value);
+     this.size=this.size.filter((value:any)=>value !=event.target.value);
     }
  
  
@@ -93,9 +93,9 @@ button:boolean=true
 
   SubmitmyData(){
     let formvalue=this.formproduct.value
-    this.newsizesarray.forEach((element:string) => {
+    this.size.forEach((element:string) => {
       let formControl=new FormControl(element);
-      this.formproduct.get("Size").push(formControl)
+      this.formproduct.get("selectSize").push(formControl)
     });
  
 
@@ -108,7 +108,7 @@ button:boolean=true
     MultipartFormData.append('LogoMaterial', this.formproduct.get('LogoMaterial').value);
     MultipartFormData.append('color', this.formproduct.get('color').value);
     // MultipartFormData.append('ProductMaterial', this.formproduct.get('ProductMaterial').value);
-    MultipartFormData.append('Size', this.formproduct.get('Size').value);
+    MultipartFormData.append('selectSize', this.formproduct.get('selectSize').value);
     
     this.newImageArray.forEach((imagedata:any)=>{
   MultipartFormData.append('images',imagedata);
@@ -124,10 +124,10 @@ button:boolean=true
 
     this.ProductdataService.CreateProductcard(MultipartFormData).subscribe((res:any)=>{
       this.toaster.success(res.message)
-      let productSize=this.formproduct.get('Size')
+      let productSize=this.formproduct.get('selectSize')
       productSize.clear()
       this.formproduct.reset()
-      this.newsizesarray=[ ]
+      this.size=[ ]
       
       
       this.fileSelect.nativeElement.value=null
