@@ -5,9 +5,9 @@ const fs=require('fs')
 
 const ProductData=async (req,res )=>{
 try {
-    const{ProductName,ProductPrice,Category,LogoMaterial,description,size,ProductQuantity,color}=req.body
+    const{ProductName,ProductPrice,Category,LogoMaterial,description,Size,ProductQuantity,color}=req.body
     let ImageDetails=[]
-    let Size=size.split(',')
+    let size=Size.split(',')
     req.files.forEach(element => {
         const {filename,orignalname,mimetype}=element
         ImageDetails.push({

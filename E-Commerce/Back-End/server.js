@@ -4,9 +4,11 @@ const express=require('express');
 // khae sy b response request askti hai humny icko hybrid krdia haii for mobile users for watch users nd for all users that's why we're using cors
 const cors= require('cors')
 const amen = require('./configuration/configuration')
-const PORT = process.env.PORT || 9090;
-// const PORT= 3232;
 const LoadMyEnviormentVariables = require('./configuration/LoadMyEnvironmentVariable');
+const PORT = process.env.PORT  ;
+// const PORT= 3232;
+
+
 
 // //Block Start Initialize the app and Creating app mete-data
 const app = express();
@@ -17,7 +19,8 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.raw());
 app.use(cors());
-app.use('/assets', express.static('assets'));
+app.use('/assets', express.static('assets')); 
+
 
 
 

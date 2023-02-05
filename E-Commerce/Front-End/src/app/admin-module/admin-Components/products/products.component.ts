@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
   selectSize= ["Small", "Medi..", "Large", "X-L", "XX-L"];
   CategoryArray:any=['Men','Women'];
   formproduct:FormGroup |any;
-   size:any=[];
+   newsizesarray:any=[];
    newImageArray:any=[]
 button:boolean=true
 @ViewChild('fileSelect') fileSelect:ElementRef|any
@@ -45,7 +45,7 @@ button:boolean=true
       LogoMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
       color:new FormControl('',Validators.required),
       ProductMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
-      selectSize: new FormArray([]),
+      Size: new FormArray([]),
 
     })
   }
@@ -56,9 +56,9 @@ button:boolean=true
   getSize(event: any) {
     if(event.target.checked){
      let value= event.target.value;
-     this.size.push(value);
+     this.newsizesarray.push(value);
     }else{
-     this.size=this.size.filter((value:any)=>value !=event.target.value);
+     this.newImageArray=this.newsizesarray.filter((value:any)=>value !=event.target.value);
     }
  
  
@@ -93,22 +93,22 @@ button:boolean=true
 
   SubmitmyData(){
     let formvalue=this.formproduct.value
-    this.size.forEach((element:string) => {
+    this.newsizesarray.forEach((element:string) => {
       let formControl=new FormControl(element);
-      this.formproduct.get("selectSize").push(formControl)
+      this.formproduct.get("Size").push(formControl)
     });
-
+ 
 
     let  MultipartFormData=new FormData();
-    MultipartFormData.append('productName',this.formproduct.get('productName').value);
+    MultipartFormData.append('ProductName',this.formproduct.get('ProductName').value);
     MultipartFormData.append('ProductQuantity', this.formproduct.get('ProductQuantity').value);
     MultipartFormData.append('ProductPrice', this.formproduct.get('ProductPrice').value);
     MultipartFormData.append('EnterDescription', this.formproduct.get('EnterDescription').value);
     MultipartFormData.append('Category', this.formproduct.get('Category').value);
     MultipartFormData.append('LogoMaterial', this.formproduct.get('LogoMaterial').value);
     MultipartFormData.append('color', this.formproduct.get('color').value);
-    MultipartFormData.append('ProductMaterial', this.formproduct.get(' ProductMaterial').value);
-    MultipartFormData.append('selectSize', this.formproduct.get('selectSize').value);
+    // MultipartFormData.append('ProductMaterial', this.formproduct.get('ProductMaterial').value);
+    MultipartFormData.append('Size', this.formproduct.get('Size').value);
     
     this.newImageArray.forEach((imagedata:any)=>{
   MultipartFormData.append('images',imagedata);
@@ -122,20 +122,21 @@ button:boolean=true
 
    
 
-    // this.ProductdataService.CreateProductcard(MultipartFormData).subscribe((res:any)=>{
-    //   this.toaster.success(res.message)
-    //   let productSize=this.ProductCreateForm.get('size')
-    //   productSize.clear()
-    //   this.ProductCreateForm.reset()
-    //   this.size=[ ]
+    this.ProductdataService.CreateProductcard(MultipartFormData).subscribe((res:any)=>{
+      this.toaster.success(res.message)
+      let productSize=this.formproduct.get('Size')
+      productSize.clear()
+      this.formproduct.reset()
+      this.newsizesarray=[ ]
       
       
-    //   this.fileSelect.nativeElement.value=null
-    //   this.newImageArray=[]
+      this.fileSelect.nativeElement.value=null
+      this.newImageArray=[]
     
     
-    // })
+    })
   }
+
 
     
   

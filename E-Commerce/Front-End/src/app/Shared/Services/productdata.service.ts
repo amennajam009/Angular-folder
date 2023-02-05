@@ -12,7 +12,7 @@ export class ProductdataService {
    }
 
   CreateProductcard(payLoad:any){
- return this.HttpClient.post('http://localhost:9090/productManagment/ProductData',payLoad);
+ return this.HttpClient.post('http://localhost:2525/productManagment/ProductData',payLoad);
   }
 
   GetProductcard(){
