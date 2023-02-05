@@ -5,9 +5,9 @@ const fs=require('fs')
 
 const ProductData=async (req,res )=>{
 try {
-    const{ProductName,ProductPrice,Category,LogoMaterial,description,selectSize,ProductQuantity,color}=req.body
+    const{ProductName,ProductPrice,Category,LogoMaterial,description,size,ProductQuantity,color}=req.body
     let ImageDetails=[]
-    let Size=selectSize.split(',')
+    let Size=size.split(',')
     req.files.forEach(element => {
         const {filename,orignalname,mimetype}=element
         ImageDetails.push({
@@ -18,7 +18,7 @@ try {
     });
     // creating collection in database 
     const documentoCraete=  new ProductModelSchema({
-        ProductName,ProductPrice,description,Category,size:selectSize,ProductQuantity,LogoMaterial,color,
+        ProductName,ProductPrice,description,Category,Size:Size,ProductQuantity,LogoMaterial,color,
         ImageDetail:ImageDetails
     })
     // if data is saved this will be the response 
