@@ -41,10 +41,10 @@ button:boolean=true
       ProductQuantity:new FormControl('',[Validators.required,Validators.pattern(/^[0-9]*$/)]),
       ProductPrice:new FormControl('',[Validators.required,Validators.pattern(/^[0-9]*$/)]),
       EnterDescription:new FormControl('',Validators.required,),
-      Category:new FormControl('',Validators.required),
+      // Category:new FormControl('',Validators.required),
       LogoMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
       color:new FormControl('',Validators.required),
-      ProductMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
+      // ProductMaterial:new FormControl('',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]),
       selectSize: new FormArray([]),
 
     })
@@ -104,7 +104,7 @@ button:boolean=true
     MultipartFormData.append('ProductQuantity', this.formproduct.get('ProductQuantity').value);
     MultipartFormData.append('ProductPrice', this.formproduct.get('ProductPrice').value);
     MultipartFormData.append('EnterDescription', this.formproduct.get('EnterDescription').value);
-    MultipartFormData.append('Category', this.formproduct.get('Category').value);
+    // MultipartFormData.append('Category', this.formproduct.get('Category').value);
     MultipartFormData.append('LogoMaterial', this.formproduct.get('LogoMaterial').value);
     MultipartFormData.append('color', this.formproduct.get('color').value);
     // MultipartFormData.append('ProductMaterial', this.formproduct.get('ProductMaterial').value);
@@ -115,7 +115,7 @@ button:boolean=true
     
     })
 
-
+  
 
 
 

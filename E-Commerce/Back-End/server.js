@@ -1,6 +1,4 @@
 const express=require('express');
-
-
 // khae sy b response request askti hai humny icko hybrid krdia haii for mobile users for watch users nd for all users that's why we're using cors
 const cors= require('cors')
 const amen = require('./configuration/configuration')

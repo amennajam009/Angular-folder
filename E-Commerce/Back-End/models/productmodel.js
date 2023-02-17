@@ -23,8 +23,8 @@ const ProductSchema = mongoose.Schema({
     EnterDescription:{ type:String, required:true },
     status: { type: Number, default: 1 },
     softDeleteStatus: { type: Number, default: 0},
-    Category: { type:String, required:true},
-    ProductMaterial: { type:String, required:true},
+    // Category: { type:String, required:true},
+    // ProductMaterial: { type:String, required:true},
     
     ImageDetail: [
         {
