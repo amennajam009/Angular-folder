@@ -16,7 +16,7 @@ export class ProductdataService {
   }
 
   GetProductcard(){
-    return this.HttpClient.get('http://localhost:9090/productManagment/ProductData');
+    return this.HttpClient.get('http://localhost:2525/productManagment/getProductData');
      }
   
 }

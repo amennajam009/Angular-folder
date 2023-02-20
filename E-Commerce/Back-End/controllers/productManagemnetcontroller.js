@@ -37,4 +37,23 @@ try {
 }
 }
 
-module.exports={ProductData}
+
+ const getProductData= async(req,res)=>{
+    try {
+        
+        const DocumentToGet=await ProductModelSchema.find()
+        res.json({
+            message: 'All Documents Found',
+            Data: true,
+            Result:DocumentToGet
+        })
+    } catch (error) {
+        res.json({
+            message: error.message,
+            Result: null,
+            Data: false
+          })
+    }
+}
+
+module.exports={ProductData,getProductData}

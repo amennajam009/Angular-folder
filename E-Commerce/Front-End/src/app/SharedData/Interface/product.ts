@@ -9,4 +9,5 @@ export interface Product {
     Category:string,
     image:[],
     selectSize:string,
+    ImageDetail:[],
 }

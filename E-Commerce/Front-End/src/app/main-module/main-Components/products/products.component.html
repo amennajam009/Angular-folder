@@ -1,1 +1,18 @@
-<p>products works!</p>
+<div class="container">
+ <div class="row">
+<div class="col" *ngFor="let data of Allproducts">
+<div class="card" style="width: 18rem;">
+ <img [src]="Url+data.ImageDetail[0].ImageUrl" class="img-fluid" alt="data.ProductName">
+ <div class="body-body">
+    <h2 class="card-title">{{data.ProductName}}</h2>
+    <p class="card-title">Description:{{data.EnterDescription}}</p>
+    <p class="card-title">Quantity:{{data.ProductQuantity}}</p>
+    <p class="card-title">Price:{{data.ProductPrice}}</p>
+ </div>
+</div>
+</div>
+
+ </div>
+
+</div>
+

@@ -1,6 +1,6 @@
 const express = require('express');
 const Router =  express.Router();
-const {ProductData}=require('../controllers/productManagemnetcontroller');
+const {ProductData,getProductData}=require('../controllers/productManagemnetcontroller');
 
 // calling my middleware and utilss
 const {UploadProductImage} =require('../middlewares/Firstguard')
@@ -12,6 +12,6 @@ const {UploadProductImage} =require('../middlewares/Firstguard')
 //Start Block Calling and Initializing Controlers
 
 Router.post('/ProductData',UploadProductImage.array('images',20),ProductData);
-Router.get('/ProductData', ProductData);
+Router.get('/getProductData', getProductData);
 
 module.exports = Router;
