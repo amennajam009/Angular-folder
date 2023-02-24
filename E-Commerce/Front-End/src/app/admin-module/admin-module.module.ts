@@ -7,6 +7,7 @@ import { AdminModuleComponent } from './admin-module.component';
 import { DashboardComponent } from './admin-Components/dashboard/dashboard.component';
 import { ProductsComponent } from './admin-Components/products/products.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ProductsAnalyticsComponent } from './admin-Components/products-analytics/products-analytics.component';
 
 
 
@@ -16,7 +17,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     AdminModuleComponent,
     DashboardComponent,
     ProductsComponent,
-    TestingComponent
+    TestingComponent,
+    ProductsAnalyticsComponent
   ],
   imports: [
     CommonModule,
