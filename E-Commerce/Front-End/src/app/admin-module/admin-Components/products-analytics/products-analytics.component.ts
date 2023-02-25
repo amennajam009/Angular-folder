@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsAnalyticsComponent implements OnInit {
 
-  ProductArray=[1,2,3,4,5]
+ProductArray=[1,2,3,4,5];
 
   constructor() { }
 
