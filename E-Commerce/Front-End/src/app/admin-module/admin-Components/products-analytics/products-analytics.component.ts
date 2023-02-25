@@ -1,4 +1,6 @@
+import { Product } from './../../../SharedData/Interface/product';
 import { Component, OnInit } from '@angular/core';
+import { ProductdataService } from 'src/app/Shared/Services/productdata.service';
 
 @Component({
   selector: 'app-products-analytics',
@@ -6,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products-analytics.component.css']
 })
 export class ProductsAnalyticsComponent implements OnInit {
+Url='';
+ProductArray:any=[];
 
-ProductArray=[1,2,3,4,5];
-
-  constructor() { }
+  constructor(private _productservice:ProductdataService) {
+  }
 
   ngOnInit(): void {
+    this._productservice.GetProductcard().subscribe((Responsefrombackend:any)=>{
+      this.ProductArray = Responsefrombackend.Result;
+    })
   }
 
 }

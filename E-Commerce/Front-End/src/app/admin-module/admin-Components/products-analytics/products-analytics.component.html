@@ -14,9 +14,9 @@
         <tbody>
           <tr *ngFor="let data of ProductArray ; let i=index">
             <th class="text-center">{{i+1}}</th>
-            <td class="text-center">Mark</td>
-            <td class="text-center">Otto</td>
-            <td class="text-center">@mdo</td>
+            <td class="text-center">{{data.ProductName}}</td>
+            <td class="text-center">{{data.ProductPrice}}</td>
+            <td class="text-center"><img [src]=""></td>
             <td class="text-center"><i class="fa-solid fa-eye text-info" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
             <td class="text-center"><button class="btn btn-outline-danger">delete</button></td>
           </tr>
