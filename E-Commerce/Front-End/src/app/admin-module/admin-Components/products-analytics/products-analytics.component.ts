@@ -8,7 +8,7 @@ import { ProductdataService } from 'src/app/Shared/Services/productdata.service'
   styleUrls: ['./products-analytics.component.css']
 })
 export class ProductsAnalyticsComponent implements OnInit {
-Url='';
+  Url='http://localhost:2525/';
 ProductArray:any=[];
 
   constructor(private _productservice:ProductdataService) {
