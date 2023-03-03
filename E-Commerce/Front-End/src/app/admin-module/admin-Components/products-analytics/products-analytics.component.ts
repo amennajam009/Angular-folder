@@ -10,7 +10,7 @@ import { ProductdataService } from 'src/app/Shared/Services/productdata.service'
 export class ProductsAnalyticsComponent implements OnInit {
   Url='http://localhost:2525/';
 ProductArray:any=[];
-
+particularproductData:any = {}
   constructor(private _productservice:ProductdataService) {
   }
 
@@ -21,7 +21,7 @@ ProductArray:any=[];
   }
   getparticularDataId(_id:any){
    this._productservice.GetProductById(_id).subscribe((res:any)=>{
-   res;
+   this.particularproductData= res.Result;
    })
   }
 }

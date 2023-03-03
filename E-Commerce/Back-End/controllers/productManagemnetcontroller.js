@@ -63,7 +63,7 @@ const getProductById = async(req,res)=>{
          const Id = req.params._id;  
         const documentToFind = await ProductModelSchema.findOne(
             {_id:Id}, //condition
-            {status:0}
+            // {status:1 , ProductPrice:1} //projection (projection means only show this  )
         )
         res.json({
           message: 'Data found successfully',
