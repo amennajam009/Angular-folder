@@ -1,5 +1,6 @@
 const ProductModelSchema =require('../models/productmodel')
 const fs=require('fs')
+const productmodel = require('../models/productmodel')
 // const productModel = require('../models/productModel')
 
 
@@ -41,7 +42,7 @@ try {
  const getProductData= async(req,res)=>{
     try {
         
-        const DocumentToGet=await ProductModelSchema.find()
+        const DocumentToGet= await ProductModelSchema.find()
         res.json({
             message: 'All Documents Found',
             Data: true,
@@ -56,4 +57,26 @@ try {
     }
 }
 
-module.exports={ProductData,getProductData}
+
+const getProductById = async(req,res)=>{
+    try {
+         const Id = req.params._id;  
+        const documentToFind = await ProductModelSchema.findOne(
+            {_id:Id}, //condition
+            {status:0}
+        )
+        res.json({
+          message: 'Data found successfully',
+          Data:true,
+          Result:documentToFind
+        })
+    } catch (error) {
+        res.json({
+            message:error.message,
+            Result:null,
+            Data:false
+        })
+    }
+}
+
+module.exports={ProductData,getProductData,getProductById}

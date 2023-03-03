@@ -18,8 +18,9 @@
             <td class="text-center"><img [src]="Url+data.ImageDetail[0].ImageUrl" class="img rounded-circle" style="width: 40px;"></td>
             <td class="text-center">{{data.ProductName}}</td>
             <td class="text-center">{{data.ProductPrice}}</td>
-            <td class="text-center">{{data.com}}</td>
-            <td class="text-center"><i class="fa-solid fa-eye text-info" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
+            <td class="text-center">{{data.status}}</td>
+            <td class="text-center"></td>
+            <td class="text-center"><i class="fa-solid fa-eye text-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getparticularDataId(data._id)"></i></td>
             <td class="text-center"><button class="btn btn-outline-danger">delete</button></td>
           </tr>
         </tbody>

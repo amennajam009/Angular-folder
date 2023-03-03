@@ -19,4 +19,7 @@ export class ProductdataService {
     return this.HttpClient.get('http://localhost:2525/productManagment/getProductData');
      }
   
+  GetProductById(_id:any){
+    return this.HttpClient.get(`http://localhost:2525/productManagment/getProductById/${_id}`)
+  }
 }

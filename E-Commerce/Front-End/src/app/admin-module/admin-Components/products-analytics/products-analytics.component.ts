@@ -19,5 +19,9 @@ ProductArray:any=[];
       this.ProductArray = Responsefrombackend.Result;
     })
   }
-
+  getparticularDataId(_id:any){
+   this._productservice.GetProductById(_id).subscribe((res:any)=>{
+   res;
+   })
+  }
 }
