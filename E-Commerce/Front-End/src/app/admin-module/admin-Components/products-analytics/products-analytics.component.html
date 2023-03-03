@@ -8,17 +8,17 @@
             <th class="text-center">Product Name</th>
             <th class="text-center">Price</th>
             <th class="text-center">Status</th>
-            <th class="text-center">Company Name</th>
+            <!-- <th class="text-center">Company Name</th> -->
             <th class="text-center" colspan="2">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let data of ProductArray ; let i=index">
             <th class="text-center">{{i+1}}</th>
-            <td class="text-center"><img [src]="Url+data.ImageDetail[0].ImageUrl" class="rounded-circle" style="width: 46px;"></td>
+            <td class="text-center"><img [src]="Url+data.ImageDetail[0].ImageUrl" class="img rounded-circle" style="width: 40px;"></td>
             <td class="text-center">{{data.ProductName}}</td>
             <td class="text-center">{{data.ProductPrice}}</td>
-            <td class="text-center"></td>
+            <td class="text-center">{{data.com}}</td>
             <td class="text-center"><i class="fa-solid fa-eye text-info" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
             <td class="text-center"><button class="btn btn-outline-danger">delete</button></td>
           </tr>
@@ -27,10 +27,7 @@
       
 </div>
 
-
-
-
-
+ 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
@@ -49,3 +46,5 @@
     </div>
   </div>
 </div>
+
+
