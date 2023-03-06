@@ -1,6 +1,6 @@
 const express = require('express');
 const Router =  express.Router();
-const {ProductData,getProductData,getProductById}=require('../controllers/productManagemnetcontroller');
+const {ProductData,getProductData,getProductById,SoftDelete}=require('../controllers/productManagemnetcontroller');
 
 // calling my middleware and utilss
 const {UploadProductImage} =require('../middlewares/Firstguard')
@@ -14,5 +14,6 @@ const {UploadProductImage} =require('../middlewares/Firstguard')
 Router.post('/ProductData',UploadProductImage.array('images',20),ProductData);
 Router.get('/getProductData', getProductData);
 Router.get('/getProductById/:_id', getProductById);
+Router.delete('/SoftDelete/:_id',SoftDelete)
 
 module.exports = Router;

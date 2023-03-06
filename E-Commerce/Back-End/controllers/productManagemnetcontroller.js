@@ -79,4 +79,25 @@ const getProductById = async(req,res)=>{
     }
 }
 
-module.exports={ProductData,getProductData,getProductById}
+const SoftDelete = async(req,res)=>{
+    try {
+        const Id = req.params._id;
+        const documentTodel = await ProductModelSchema.updateOne(
+            {_id:Id}, //condition
+            {$set:{softDeleteStatus:1}}
+        )
+        res.json({
+            message:'Data is deleted successfully',
+            Result:documentTodel,
+            Data:true
+        })
+    } catch (error) {
+        res.json({
+            message:'Data is not deleted',
+            Result:null,
+            Data:false
+        })
+    }
+}
+
+module.exports={ProductData,getProductData,getProductById,SoftDelete}

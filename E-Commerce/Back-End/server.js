@@ -35,6 +35,7 @@ app.all('*', (req, res, next) => {
     next();
      //if nothing of the response sent back so next() means other rou
 });
+
 const _productManagmentRoute=require('./route/ProductManagmentRoute');
 const _AdminManagementRoute=require('./route/AdminManagmentRoute');
 const _UserManagementRoute=require('./route/UserManagementRoute');
