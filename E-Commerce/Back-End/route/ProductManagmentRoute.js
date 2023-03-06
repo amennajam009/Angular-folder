@@ -16,4 +16,5 @@ Router.get('/getProductData', getProductData);
 Router.get('/getProductById/:_id', getProductById);
 Router.delete('/SoftDelete/:_id',SoftDelete)
 
+
 module.exports = Router;
