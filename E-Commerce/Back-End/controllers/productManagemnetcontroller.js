@@ -79,6 +79,7 @@ const getProductById = async(req,res)=>{
     }
 }
 
+
 const SoftDelete = async(req,res)=>{
     try {
         const Id = req.params._id;
