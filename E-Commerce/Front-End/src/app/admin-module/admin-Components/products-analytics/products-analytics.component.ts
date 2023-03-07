@@ -16,14 +16,19 @@ particularproductData:any = {}
   }
 
   ngOnInit(): void {
-    this._productservice.GetProductcard().subscribe((Responsefrombackend:any)=>{
-     Responsefrombackend.Result.forEach((element:any) => {
-      if(element.softDeleteStatus !==1){
-        this.ProductArray.push(element);
-      }
-     });
-    })
+   this.PopulateProductArray();
   }
+
+ PopulateProductArray(){
+  this._productservice.GetProductcard().subscribe((Responsefrombackend:any)=>{
+    Responsefrombackend.Result.forEach((element:any) => {
+     if(element.softDeleteStatus !==1){
+       this.ProductArray.push(element);
+     }
+    });
+   })
+ }
+
   getparticularDataId(_id:any){
    this._productservice.GetProductById(_id).subscribe((res:any)=>{
    this.particularproductData= res.Result;
@@ -34,7 +39,7 @@ particularproductData:any = {}
     this._productservice.SoftDelete(_id).subscribe((res:any)=>{
       this._Toasterservice.error(res.message);
       this.ProductArray=[];
-      this.ngOnInit()
+      this.PopulateProductArray();
     })
   }
 }
