@@ -1,9 +1,11 @@
+
 const express=require('express');
+const path=require('path')
 // khae sy b response request askti hai humny icko hybrid krdia haii for mobile users for watch users nd for all users that's why we're using cors
 const cors= require('cors')
 const amen = require('./configuration/configuration')
 const LoadMyEnviormentVariables = require('./configuration/LoadMyEnvironmentVariable');
-const PORT = process.env.PORT  ;
+// const PORT = process.env.PORT;
 // const PORT= 3232;
 
 
@@ -17,8 +19,10 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.raw());
 app.use(cors());
+// const PORT = process.env.PORT;
 // static ka matlb hai icko hum access kr paa rhy han 
 app.use('/assets', express.static('assets')); 
+const PORT =process.env.PORT || 2525;
 
 
 
