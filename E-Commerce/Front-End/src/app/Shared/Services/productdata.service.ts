@@ -26,3 +26,4 @@ export class ProductdataService {
     return this.HttpClient.delete(`http://localhost:2525/productManagment/SoftDelete/${_id}`)
   }
 }
+
