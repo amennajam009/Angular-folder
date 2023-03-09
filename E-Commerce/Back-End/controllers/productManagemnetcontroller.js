@@ -101,4 +101,26 @@ const SoftDelete = async(req,res)=>{
     }
 }
 
-module.exports={ProductData,getProductData,getProductById,SoftDelete}
+const HardDelete = async (req,res)=>{
+    try {
+        const Id = req.params._id
+        const documentToHarddel = await ProductModelSchema.deleteOne(
+            {_id:Id}, //condition
+            ) 
+            documentToHarddel;
+            res.json({
+                message:'Deleted',
+                Data:true,
+                Result:documentToHarddel
+            })
+    } catch (error) {
+        res.json({
+            message:'Not deleted',
+            Data:false,
+            Result:null
+        })
+        
+    }
+}
+
+module.exports={ProductData,getProductData,getProductById,SoftDelete,HardDelete}
