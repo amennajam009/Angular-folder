@@ -5,7 +5,7 @@ const path=require('path')
 const cors= require('cors')
 const amen = require('./configuration/configuration')
 const LoadMyEnviormentVariables = require('./configuration/LoadMyEnvironmentVariable');
-// const PORT = process.env.PORT;
+// const PORT = process.env.PORT || 2525;
 // const PORT= 3232;
 
 
@@ -22,7 +22,7 @@ app.use(cors());
 // const PORT = process.env.PORT;
 // static ka matlb hai icko hum access kr paa rhy han 
 app.use('/assets', express.static('assets')); 
-// const PORT =process.env.PORT;
+const PORT =process.env.PORT;
 
 
 
@@ -75,7 +75,7 @@ app.use((error, req, res, next) => {
 
 
 // //Start Block Accessing The Routes in the Entry Point
-const PORT =process.env.PORT;
+
 app.listen(PORT,()=>{
     console.log(`server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
     // console.log(process.env);
