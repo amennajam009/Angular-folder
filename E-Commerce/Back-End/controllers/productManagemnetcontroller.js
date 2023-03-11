@@ -101,25 +101,32 @@ const SoftDelete = async(req,res)=>{
     }
 }
 
-const HardDelete = async (req,res)=>{
+const HardDelete=async(req,res)=>{
+
     try {
-        const Id = req.params._id
-        const documentToHarddel = await ProductModelSchema.deleteOne(
-            {_id:Id}, //condition
-            ) 
-            documentToHarddel;
-            res.json({
-                message:'Deleted',
-                Data:true,
-                Result:documentToHarddel
-            })
-    } catch (error) {
-        res.json({
-            message:'Not deleted',
-            Data:false,
-            Result:null
+        const ID=req.params._id
+        const DocumentToGet=await ProductModelSchema.findOne({_id:ID})
+        if(!!DocumentToGet){
+            const dochardelete=await ProductModelSchema.deleteOne({_id:DocumentToGet._id} )
+            DocumentToGet.ImageDetail.forEach((file)=>{
+            fs.unlinkSync(`${file.ImageUrl}`)
         })
+        fs.rmdirSync(`./assets/product/${DocumentToGet.ProductName}`)
+        res.json({
+            message:'deleted',
+            data:true,
+            result:dochardelete
+         })
+        }
+    } 
+    
+    catch (error) {
         
+        res.json({
+            message: error.message,
+            Result: null,
+            Data: false
+          })
     }
 }
 
