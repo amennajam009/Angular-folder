@@ -130,4 +130,5 @@ const HardDelete=async(req,res)=>{
     }
 }
 
+
 module.exports={ProductData,getProductData,getProductById,SoftDelete,HardDelete}
