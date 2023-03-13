@@ -23,7 +23,13 @@ export class ProductdataService {
     return this.HttpClient.get(`http://localhost:2525/productManagment/getProductById/${_id}`);
   }
   SoftDelete(_id:any){
-    return this.HttpClient.delete(`http://localhost:2525/productManagment/SoftDelete/${_id}`)
+    return this.HttpClient.delete(`http://localhost:2525/productManagment/SoftDelete/${_id}`);
   }
+
+   HardDelete(_id:any){
+    return this.HttpClient.delete(`http://localhost:2525/productManagment/HardDelete/${_id}`);
+   }
 }
+ 
+
 

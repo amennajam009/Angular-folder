@@ -42,5 +42,14 @@ particularproductData:any = {}
       this.PopulateProductArray();
     })
   }
+
+  HardDeleteDataById(_id:any){
+    this._productservice.HardDelete(_id).subscribe((res:any)=>{
+      this._Toasterservice.error("Hard Deleted");
+      this.ProductArray=[];
+      this.PopulateProductArray();
+
+    })
+  }
 }
 
