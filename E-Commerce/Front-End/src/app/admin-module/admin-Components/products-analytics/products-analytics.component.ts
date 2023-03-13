@@ -45,7 +45,7 @@ particularproductData:any = {}
 
   HardDeleteDataById(_id:any){
     this._productservice.HardDelete(_id).subscribe((res:any)=>{
-      this._Toasterservice.error("Hard Deleted");
+      this._Toasterservice.error(res.message);
       this.ProductArray=[];
       this.PopulateProductArray();
 

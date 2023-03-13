@@ -112,7 +112,7 @@ const HardDelete=async(req,res)=>{
             fs.unlinkSync(`${file.ImageUrl}`)
         })
         //rmdir  means remove directory 
-        fs.rmdirSync(`./assets/product/${DocumentToGet.ProductName}`)
+        fs.rmdirSync(`./assets/Product/${DocumentToGet.ProductName}`)
         res.json({
             message:'deleted',
             data:true,
