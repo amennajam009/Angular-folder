@@ -51,5 +51,10 @@ particularproductData:any = {}
 
     })
   }
+//  UpdateById(_id:any){
+//   this._productservice.UpdateProductById(_id).subscribe((res:any)=>{
+//     res;
+//   })
+//  }
 }
 

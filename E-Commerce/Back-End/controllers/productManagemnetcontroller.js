@@ -131,5 +131,25 @@ const HardDelete=async(req,res)=>{
     }
 }
 
-
-module.exports={ProductData,getProductData,getProductById,SoftDelete,HardDelete}
+  const UpdateProductById=async(req,res)=>{
+    try {
+      const ID=req.body._id
+      const payload=req.body
+      const DocumentToUpdate=await ProductModelSchema.updateOne(
+          {_id:ID},
+          payload
+      )
+      res.json({
+          message:'data Updated',
+          result:DocumentToUpdate,
+          data:true
+      })
+    } catch (error) {
+      res.json({
+          message: error.message,
+          Result: null,
+          Data: false
+        })
+    }
+  }
+module.exports={ProductData,getProductData,getProductById,SoftDelete,HardDelete,UpdateProductById}
