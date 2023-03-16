@@ -22,7 +22,7 @@
             <td class="text-center" [ngClass]="data.status === 1 ? 'text-success' : 'text-danger'">{{data.status ===1? 'In Stock' : 'Out Of Stock'}}</td>
             <td class="text-center"></td>
             <td class="text-center"><i class="fa-solid fa-eye text-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getparticularDataId(data._id)"></i></td>
-            <td class="text-center"><i class="fa fa-pencil" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal1" ></i></td>
+            <td class="text-center"><i class="fa fa-pencil" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getparticularDataId(data._id)" ></i></td>
             <td class="text-center"><button class="btn btn-outline-danger" (click)="deleteparticularDataById(data._id)"> Soft delete</button></td>
             <td class="text-center"><button class="btn btn-outline-danger" (click)="HardDeleteDataById(data._id)">Hard Delete</button></td>
           </tr>
@@ -86,11 +86,33 @@
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">UpdateOne</h5>
+        <h5 class="modal-title" id="exampleModalLabel1">UpdateOne</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      ..............
+        <form [formGroup]="updateproductform" (ngSubmit)="update()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Product Name</label>
+            <input type="text" class="form-control" formControlName="ProductName">  
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Product Quantity</label>
+            <input type="number" class="form-control" formControlName="ProductQuantity">  
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Product Price</label>
+            <input type="number" class="form-control" formControlName="ProductPrice">  
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Color</label>
+            <input type="text" class="form-control" formControlName="color">  
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Logo Material</label>
+            <input type="text" class="form-control" formControlName="LogoMaterial">  
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
