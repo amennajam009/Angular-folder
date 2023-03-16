@@ -12,6 +12,7 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 export class ProductsAnalyticsComponent implements OnInit {
   Url='http://localhost:2525/';
 ProductArray:any=[];
+MakeMyIdPublic :any;
 particularproductData:any = {}
 updateproductform:any | FormGroup;
   constructor(private _productservice:ProductdataService , private _Toasterservice:ToastrService , private _FormBuilder:FormBuilder) {
@@ -48,6 +49,7 @@ updateproductform:any | FormGroup;
  }
 
   getparticularDataId(_id:any){
+    this.MakeMyIdPublic=_id
    this._productservice.GetProductById(_id).subscribe((res:any)=>{
    this.particularproductData= res.Result;
    this.updateproductform = this._FormBuilder.group({
@@ -87,7 +89,13 @@ updateproductform:any | FormGroup;
 //  }
 
 update(){
- console.log(this.updateproductform.value);
+  let payLoad = this.updateproductform.value;
+  payLoad['_id'] = this.MakeMyIdPublic;
+  this._productservice.UpdateProductById(payLoad).subscribe((res:any) =>{
+    this._Toasterservice.success(res.message);
+    this.getparticularDataId(this.MakeMyIdPublic);
+
+  })
 }
 }
 

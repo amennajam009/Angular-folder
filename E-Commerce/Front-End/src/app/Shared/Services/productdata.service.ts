@@ -30,9 +30,9 @@ export class ProductdataService {
     return this.HttpClient.delete(`http://localhost:2525/productManagment/HardDelete/${_id}`);
    }
 
-   UpdateProductData(payload:any){
+   UpdateProductById(payload:any){
 
-    return this.HttpClient.post(`http://localhost:2525/ProductDataToDatabase/UpdateProductById`,payload)
+    return this.HttpClient.post(`http://localhost:2525/productManagment/UpdateProductById`,payload)
     
     }
 }

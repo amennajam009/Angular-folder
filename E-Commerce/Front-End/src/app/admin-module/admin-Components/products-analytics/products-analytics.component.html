@@ -82,6 +82,8 @@
 
 
 <!-- second modal -->
+<form [formGroup]="updateproductform" (ngSubmit)="update()">
+
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabe1" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
@@ -90,7 +92,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="updateproductform" (ngSubmit)="update()">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Product Name</label>
             <input type="text" class="form-control" formControlName="ProductName">  
@@ -111,14 +112,15 @@
             <label for="exampleInputEmail1" class="form-label">Logo Material</label>
             <input type="text" class="form-control" formControlName="LogoMaterial">  
           </div>
-          <button type="submit" class="btn btn-primary w-100">Submit</button>
-        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
+
+  </form>
+
 
