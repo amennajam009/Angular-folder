@@ -122,7 +122,6 @@ const HardDelete=async(req,res)=>{
     } 
     
     catch (error) {
-        
         res.json({
             message: error.message,
             Result: null,
@@ -133,14 +132,14 @@ const HardDelete=async(req,res)=>{
 
   const UpdateProductById=async(req,res)=>{
     try {
-      const ID=req.body._id
+      const ID = req.body._id
       const payload=req.body
       const DocumentToUpdate=await ProductModelSchema.updateOne(
-          {_id:ID},
-          payload
+          {_id:ID}, //condition 
+          payload //options
       )
       res.json({
-          message:'data Updated',
+          message:'Updated Successfully',
           result:DocumentToUpdate,
           data:true
       })
