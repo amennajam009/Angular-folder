@@ -1,25 +1,22 @@
 const express=require('express');
 const Router =  express.Router();
+ 
+
+// // here i'm calling my controller
+// const { } = require('../controllers/UserManagementController');
 
 
+// //calling my middleware
 
-//Start Block Calling and Initializing Middlewares
-
-//Start Block Calling and Initializing Middlewares
-
-//Start Block Calling and Initializing Controlers
-const { UserTable} = require('../controllers/UserManagementController');
-
-
-//Start Block Calling and Initializing Controlers
+// const { } = require('');
 
 
 
 
-// Route
+// // Route
 
-Router.post('/UserTable', UserTable);
+// // Router.post();
 
-// route
+// // route
 
 module.exports = Router;

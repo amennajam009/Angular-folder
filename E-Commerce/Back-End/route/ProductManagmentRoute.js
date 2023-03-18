@@ -1,6 +1,11 @@
 const express = require('express');
 const Router =  express.Router();
-const {ProductData,getProductData,getProductById,SoftDelete,HardDelete,UpdateProductById}=require('../controllers/productManagemnetcontroller');
+const {ProductData,
+       getProductData,
+       getProductById,
+       SoftDelete,
+       HardDelete,
+       UpdateProductById}=require('../controllers/productManagemnetcontroller');
 
 // calling my middleware and utilss
 const {UploadProductImage} =require('../middlewares/Firstguard');
