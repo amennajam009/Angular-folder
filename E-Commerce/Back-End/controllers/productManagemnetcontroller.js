@@ -85,7 +85,7 @@ const SoftDelete = async(req,res)=>{
         const Id = req.params._id;
         const documentTodel = await ProductModelSchema.updateOne(
             {_id:Id}, //condition
-            {$set:{softDeleteStatus:1}}
+            {$set:{softDeleteStatus:1}} // options ka syntax hai 
         )
         res.json({
             message:'Data is deleted successfully',
