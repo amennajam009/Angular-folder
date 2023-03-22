@@ -1,5 +1,5 @@
 // accessing my models here
-const { text } = require("express");
+// const { text } = require("express");
 const UserManagmentModel = require ("../models/UserManagmentModel");
 // accessing my Models here
 
@@ -7,7 +7,7 @@ const UserRegister = async (req,res)=>{
     try {
         const {firstName,lastName,email,password}=req.body;
 
-        const IfEmailAlreadyExist = await UserManagmentModel.findOne({
+        const checkIFAdminAlreadyExists = await UserManagmentModel.findOne({
             Email:email,
         })
         if(checkIFAdminAlreadyExists?.userPrivilege==='Admin'){
@@ -18,19 +18,36 @@ const UserRegister = async (req,res)=>{
             })
         }
 
-        const checkAdminIdentity = email.split('@')[0];
-        checkAdminIdentity =  text.toLowerCase();
-        if(checkAdminIdentity === 'admin'){
-            
+        let checkAdminIdentity = email.split('@')[0];
+        checkAdminIdentity =  checkAdminIdentity.toLowerCase();
+        if(checkAdminIdentity ==='admin'){
+            const  adminToCreate =new UserManagmentModel({
+                firstName,lastName,email,password,userPrivilege:'Admin'
+            })
+            const adminToSave=await adminToCreate.save();
+            return res.json({
+                message:'Register Successfully',
+                data:true
+            })
         }
-    } catch (error) {
+        const userResgiteration=new UserManagmentModel({
+            firstName, lastName, email, password
         
-    }
-}
+        })
+        const userToSave =await userResgiteration.save();
+        res.json({
+            message:'Register Successfully',
+            data:true
+        })
+        
+         } catch (error) {
+            res.json({
+                error: error.message,
+                data: false,
+                result: null
+            })
+         }
+        }
+        
 
-
-
-
-
-
-module.exports={UserManagmentModel}
+module.exports={UserRegister}

@@ -3,7 +3,9 @@ const Router =  express.Router();
  
 
 // // here i'm calling my controller
-// const { } = require('../controllers/UserManagementController');
+const { 
+    UserRegister
+} = require('../controllers/UserManagementController');
 
 
 // //calling my middleware
@@ -15,7 +17,7 @@ const Router =  express.Router();
 
 // // Route
 
-// // Router.post();
+Router.post('/UserRegister',UserRegister);
 
 // // route
 
