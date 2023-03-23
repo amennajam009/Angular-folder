@@ -4,7 +4,8 @@ const Router =  express.Router();
 
 // // here i'm calling my controller
 const { 
-    UserRegister
+    UserRegister,
+    UserLogin
 } = require('../controllers/UserManagementController');
 
 
@@ -18,6 +19,7 @@ const {
 // // Route
 
 Router.post('/UserRegister',UserRegister);
+Router.post('/UserLogin',UserLogin);
 
 // // route
 
