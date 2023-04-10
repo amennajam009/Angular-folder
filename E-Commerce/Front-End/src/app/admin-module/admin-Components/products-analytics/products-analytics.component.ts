@@ -15,6 +15,7 @@ ProductArray:any=[];
 MakeMyIdPublic :any;
 particularproductData:any = {}
 updateproductform:any | FormGroup;
+
   constructor(private _productservice:ProductdataService , private _Toasterservice:ToastrService , private _FormBuilder:FormBuilder) {
     this.updateproductformModel();
   }
