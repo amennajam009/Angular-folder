@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminLoginComponent } from './management-Components/admin-management/admin-login/admin-login.component';
-import { AdminRegisterComponent } from './management-Components/admin-management/admin-register/admin-register.component';
-import { UserLoginComponent } from './management-Components/user-management/user-login/user-login.component';
-import { UserRegisterComponent } from './management-Components/user-management/user-register/user-register.component';
+
 import { ManagementModuleComponent } from './management-module.component';
+import { SignUpComponent } from './management-Components/sign-up/sign-up.component';
+import { SignInComponent } from './management-Components/sign-in/sign-in.component';
 
 const routes: Routes = [{ path: '', component: ManagementModuleComponent ,
     children:[
-      {path:'admin-login' , component: AdminLoginComponent},
-      {path:'admin-register', component: AdminRegisterComponent},
-      {path:'user-login', component:UserLoginComponent},
-      {path:'user-register', component:UserRegisterComponent},
+    {path: 'signIn' , component:SignInComponent},
+    {path: 'signup' , component:SignUpComponent}
     ]  }];
 
 @NgModule({
