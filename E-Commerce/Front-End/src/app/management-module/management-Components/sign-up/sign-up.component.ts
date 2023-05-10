@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup,Validators} from '@angular/forms';
+import { ProductdataService } from 'src/app/Shared/Services/productdata.service';
 import { UserMnangeService } from 'src/app/Shared/Services/user-mnange.service';
 
 @Component({
@@ -8,8 +9,8 @@ import { UserMnangeService } from 'src/app/Shared/Services/user-mnange.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  RegisterForm:FormGroup | any;
-  constructor(private _FormBuilder:FormBuilder ,private _UserManageService:UserMnangeService ) {
+  formproduct:FormGroup|any;
+  constructor(private _FormBuilder:FormBuilder , private _productService:ProductdataService) {
     this.myUserSignUpModel();
    }
 
@@ -17,7 +18,7 @@ export class SignUpComponent implements OnInit {
   }
 
  myUserSignUpModel(){
-  this.RegisterForm = this._FormBuilder.group({
+  this.formproduct = this._FormBuilder.group({
     firstName:new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
     lastName:new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
     email:new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
@@ -26,10 +27,10 @@ export class SignUpComponent implements OnInit {
  }
 
  UserSubmit(){
-  let payLoad = this.RegisterForm.value;
-  this._UserManageService.UserSignUpApi(payLoad).subscribe((res:any)=>{
+  let payLoad = this.formproduct.value;
+  this._productService.UserSignUpApi(payLoad).subscribe((res:any)=>{
     res;
-    this.RegisterForm.reset();
+    this.formproduct.reset();
   })
  }
 

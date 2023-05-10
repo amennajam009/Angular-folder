@@ -35,6 +35,9 @@ export class ProductdataService {
     return this.HttpClient.post(`http://localhost:2525/productManagment/UpdateProductById`,payload)
     
     }
+    UserSignUpApi(payLoad:any){
+     return this.HttpClient.post('http://localhost:2525/UserManagement/UserRegister',payLoad)
+    }
 }
  
 

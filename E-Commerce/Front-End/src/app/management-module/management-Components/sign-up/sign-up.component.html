@@ -1,9 +1,3 @@
-<!--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<h1> SignUp Form 🌱</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form [formGroup]="RegisterForm" (ngSubmit)="UserSubmit()">
+				<form [formGroup]="formproduct" (ngSubmit)="UserSubmit()">
 					<input class="text" type="text" name="Username" placeholder="Firstname" required="" formControlName="firstName">
 					<input class="text" type="text" name="Username" placeholder="Lastname" required="" formControlName="lastName">
 					<input class="text email" type="email" name="email" placeholder="Email" required="" formControlName="email">
