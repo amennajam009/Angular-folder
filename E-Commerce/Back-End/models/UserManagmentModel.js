@@ -29,6 +29,7 @@ const UserResgisterSchemme = mongoose.Schema(
 )
 
 
+
 //sort of middleware
 
 //The pre-save hook is triggered just before the user document is saved to the database.
