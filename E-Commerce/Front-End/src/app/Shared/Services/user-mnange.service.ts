@@ -13,6 +13,8 @@ export class UserMnangeService {
      return this._HttpClient.post('http://localhost:2525/UserManagement/UserRegister',payLoad);
   }
 
-
+  UserSignInApi(payLoad:any){
+    return this._HttpClient.post('http://localhost:2525/UserManagement/UserLogin',payLoad)
+  }
 
 }

@@ -85,8 +85,8 @@ const UserRegister = async (req,res)=>{
                     res.json({
                         message:"authentication Successfully!!",
                         Data:true,
-                        Result:token,
-                        userPrivilage:UserExistence.userPrivilage
+                        Token:token,
+                        userPrivilage:UserExistence.userPrivilege
                     })
             } catch (error) {
                 res.json({

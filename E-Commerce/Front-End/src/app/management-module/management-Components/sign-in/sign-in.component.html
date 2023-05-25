@@ -2,17 +2,17 @@
 <div class="full-screen-container">
   <div class="login-container">
     <h3 class="login-title">Welcome</h3>
-    <form>
+    <form [formGroup]="LoginForm" (ngSubmit)="SubmitForm()">
       <div class="input-group">
         <label>Email</label>
-        <input type="email" />
+        <input type="email" formControlName="email">
       </div>
       <div class="input-group">
         <label>Password</label>
-        <input type="password" />
+        <input type="password" formControlName="password">
       </div>
       <button type="submit" class="login-button">Sign In</button>
-      <button type="submit" class="login-button" routerLink="/ManagementModule/admin-register">Register</button>
+      <button type="submit" class="login-button" routerLink="/ManagementModule/signup">Register</button>
       <p class="mt-5" style="color: white;"> Not<a  style="text-decoration: none; color: #D2042D ;" routerLink="/ManagementModule/signup" >&nbsp; Register?</a></p>
       <p><a routerLink="/home" style="text-decoration: none; color: #D2042D ;" class="loginhome">Home</a></p>
 

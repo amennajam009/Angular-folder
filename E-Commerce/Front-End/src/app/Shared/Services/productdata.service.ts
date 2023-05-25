@@ -38,6 +38,16 @@ export class ProductdataService {
     UserSignUpApi(payLoad:any){
      return this.HttpClient.post('http://localhost:2525/UserManagement/UserRegister',payLoad)
     }
+    UserSignInApi(payLoad:any){
+      return this.HttpClient.post('http://localhost:2525/UserManagement/UserLogin',payLoad)
+    }
+
+    setTokenIntoLocalStorage(payLoad:any){
+    localStorage.setItem('Access-Token',payLoad)
+    }
+    checkUserLogin(){
+      return localStorage.getItem('Access-Token')!==null
+    }
 }
  
 
