@@ -33,7 +33,7 @@ export class SignInComponent implements OnInit {
     let loginValues=this.LoginForm.value
     this.productService.UserSignInApi(loginValues).subscribe((res:any)=>{
       this.productService.setTokenIntoLocalStorage(res.Token);
-      this.Toaster.success(res.message)
+      this.Toaster.success(res.message);
       if(res.userPrivilage === 'Admin'){
         this.router.navigate(['/AdminModule'])
 
@@ -46,4 +46,5 @@ export class SignInComponent implements OnInit {
 
 
   }
+  
 }
