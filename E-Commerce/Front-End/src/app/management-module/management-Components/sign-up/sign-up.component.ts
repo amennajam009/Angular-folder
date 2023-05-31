@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup,Validators} from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { ProductdataService } from 'src/app/Shared/Services/productdata.service';
 import { UserMnangeService } from 'src/app/Shared/Services/user-mnange.service';
 
@@ -10,7 +11,7 @@ import { UserMnangeService } from 'src/app/Shared/Services/user-mnange.service';
 })
 export class SignUpComponent implements OnInit {
   formproduct:FormGroup|any;
-  constructor(private _FormBuilder:FormBuilder , private _productService:ProductdataService) {
+  constructor(private _FormBuilder:FormBuilder , private _productService:ProductdataService , private Toaster:ToastrService) {
     this.myUserSignUpModel();
    }
 
@@ -30,6 +31,7 @@ export class SignUpComponent implements OnInit {
   let payLoad = this.formproduct.value;
   this._productService.UserSignUpApi(payLoad).subscribe((res:any)=>{
     res;
+    this.Toaster.success(res.message)
     this.formproduct.reset();
   })
  }

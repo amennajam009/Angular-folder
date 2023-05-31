@@ -81,7 +81,7 @@ const UserRegister = async (req, res) => {
         const adminToSave = await adminToCreate.save();
   
         return res.json({
-          message: 'Registered as admin successfully',
+          message: 'Registered as Admin successfully',
           data: true
         });
       }
@@ -96,7 +96,7 @@ const UserRegister = async (req, res) => {
           const userToSave = await userRegistration.save();
       
           res.json({
-            message: 'Registered as user successfully',
+            message: 'Registered as User successfully',
             data: true
           });
     

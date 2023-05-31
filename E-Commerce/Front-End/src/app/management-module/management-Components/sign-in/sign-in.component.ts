@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder ,FormControl} from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ProductdataService } from 'src/app/Shared/Services/productdata.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class SignInComponent implements OnInit {
   LoginForm:FormGroup | any;
   constructor(private FormBuilder:FormBuilder,
               private productService:ProductdataService,
-              private router:Router) { 
+              private router:Router,
+              private Toaster:ToastrService) { 
                 this.myUserLoginModel()
               }
 
@@ -31,6 +33,7 @@ export class SignInComponent implements OnInit {
     let loginValues=this.LoginForm.value
     this.productService.UserSignInApi(loginValues).subscribe((res:any)=>{
       this.productService.setTokenIntoLocalStorage(res.Token);
+      this.Toaster.success(res.message)
       if(res.userPrivilage === 'Admin'){
         this.router.navigate(['/AdminModule'])
 
